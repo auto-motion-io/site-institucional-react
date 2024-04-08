@@ -1,0 +1,157 @@
+:root{
+    --cor-titulo: #3B546C;
+    --cor-subtitulo: #474747;
+    --cor-fundo: #F1EFE9;
+    --cor-menu: #474747;
+    --cor-menu-destaque: #3b546c;
+    --cor-footer: #DFDEDB;
+}
+
+@font-face {
+    font-family: 'Aristotelica';
+    src: url('./../../fontes/aristotelica-text-trial-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Product-Bold';
+    src: url('./../../fontes/Product\ Sans\ Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Product-Regular';
+    src: url('./../../fontes/Product\ Sans\ Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Product-Regular", sans-serif;
+    overflow: hidden;
+}
+
+.background{
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.background img{
+    height: 2500px;
+}
+
+header{
+    height: 200px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+header img{
+    filter: grayscale(100%) brightness(1.3);
+}
+
+header .img-pitstop{
+    height: 34px;
+    margin-top: 15px;
+    filter: grayscale(100%) brightness(2.0);
+}
+
+#section-login{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#section-login .container{
+    height: 550px;
+    width: 570px;
+    background-color: #e7e7e7b0;
+    border-radius: 50px;
+}
+
+#section-login .container img{
+    height: 80px;
+}
+
+.inputs, .inputs label{
+    display: flex;
+    flex-direction: column;
+}
+
+#section-login .img-pitstop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.inputs{
+    padding: 0px 50px;
+}
+
+.inputs label span{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #5f5f5f;
+    padding-left: 10px;
+}
+
+.inputs label{
+    margin-bottom: 20px;
+}
+
+.inputs label input{
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+.esqueci{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 60px;
+}
+
+.esqueci a{
+    color: #5f5f5f;
+}
+
+.botao-entrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+}
+
+.botao-entrar a{
+    width: 140px;
+    height: 50px;
+    background-color: #C66D2C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.botao-cadastro{
+    margin-top: 10px;
+}
+
+.botao-cadastro a{
+    color: #5f5f5f;
+}

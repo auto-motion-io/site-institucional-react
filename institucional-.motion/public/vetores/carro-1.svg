@@ -1,6 +1,6 @@
-<svg width="190" height="172" viewBox="0 0 190 172" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<ellipse cx="45" cy="162.5" rx="145" ry="6.5" fill="#D9D9D9"/>
-<rect x="-239" width="422" height="172" fill="url(#pattern0)"/>
+<svg width="429" height="172" viewBox="0 0 429 172" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<ellipse cx="284" cy="162.5" rx="145" ry="6.5" fill="#D9D9D9"/>
+<rect width="422" height="172" fill="url(#pattern0)"/>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_93_19" transform="matrix(0.000654226 0 0 0.00160514 -0.00669821 0)"/>

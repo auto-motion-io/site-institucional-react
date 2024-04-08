@@ -1,264 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="./vetores/favicon.ico" type="image/x-icon">
-        <title>.motion</title>
-    </head>
-<style>
-    @font-face {
-        font-family: 'Aristotelica';
-        src: url('./fontes/aristotelica-text-trial-bold.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'Product-Bold';
-        src: url('./fontes/Product\ Sans\ Bold.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'Product-Regular';
-        src: url('./fontes/Product\ Sans\ Regular.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-
-    body{
-        background-color: #F1EFE9;
-        padding-top: 5vh;
-        margin: 0;
-        padding-right:10vw ;
-        padding-left: 10vw;
-        overflow-x: hidden;
-    }
-
-    body::-webkit-scrollbar {
-        width: 8px;
-        height: 3px; 
-    }
-      
-    body::-webkit-scrollbar-track {
-        background: #f3eee3ff;
-        padding: 2px;
-    }
-      
-    body::-webkit-scrollbar-thumb {
-        background-color: #3B546C;
-    }
-    
-    header{
-        width: 100%;
-        height: 120px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        font-family: 'Aristotelica';
-        color: #7a7a7a;
-        font-size: 2.5vh;
-    }
-
-    .cabecalho{
-        padding-left: 4vw;
-    }
-
-    .jornada{
-        padding-left: 4vw;
-    }
-
-    footer {
-        margin-top: 20vh;
-        height: 300px;
-        width: 100%;
-        background-color: transparent;
-        display: flex;
-        justify-content: center;
-        font-family: 'Product-Regular';
-    }
-    
-    footer .container {
-        justify-content: center;
-        align-items: center;
-        position: relative;
-    }
-    
-    footer .container:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    
-    footer .container .img-bg {
-        margin-top: -31px;
-        width: 100vw;
-        position: absolute;
-        z-index: 0;
-    }
-    
-    footer .img-footer img {
-        width: 35vh;
-        margin-right: 5vh;
-    }
-    
-    footer .menu{
-        width: 90%;
-    
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 20vh;
-        z-index: 1;
-    }
-    
-    footer .links{
-        display: flex;
-        justify-content: space-between;
-        width: 800px;
-    }
-    
-    footer .somos, .produtos, .contato, .logos{
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-    }
-    
-    footer .links h3{
-        color: #474747;
-        margin-bottom: 4px;
-    }
-    
-    footer .links a{
-        padding: 6px 0px;
-        text-decoration: none;
-        color: #474747;
-        width: fit-content;
-        transition: all 0.5s;
-    }
-    
-    footer .links a:hover{
-        scale: 1.05;
-    }
-    
-    footer .logos-redes{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 110px;
-        transition: all 0.7s;
-        filter: grayscale(100%);
-    }
-    
-    footer .logos-redes a img:hover,
-    footer .logos a img:hover{
-        filter: grayscale(0%);
-        opacity: 1;
-        scale: 1.1;
-    }
-
-    .container{
-        width: 150vw;
-        display: flex;
-        flex-direction: column;
-    }
-
-    a {
-        color: #696868;
-        text-decoration: none; 
-      }
-</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - .motion</title>
+    <link rel="stylesheet" href="./css/produtos.css">
+</head>
 <body>
     <header>
-        <div style="height: 100%; width: 40%; display: flex; align-items: center; justify-content: space-around; "  >
-            <a style="text-decoration: none;" href="./index.html"><span>Quem Somos?</span></a>
-            <a style="text-decoration: none; " href="./produtos.html" ><span style="color: #3B546C;">Produtos</span></a>
-        </div>
-        <div style=" height: 100%; width: 30%; display: flex; align-items: center; justify-content: center; ">
-            <a href="./index.html"><img  src="./vetores/motion-logo.svg" width="90%" alt="" mat></a>
-        </div>
-            <div style="height: 100%; width: 40%; display: flex; align-items: center; justify-content: space-around;">
-                <a href="./pitstop.html"><img src="./vetores/pitstop-cinza.svg" width="30%" alt="" style="margin-left: 5vh;"></a>
-                <a href="./buscar.html"><img src="./vetores/logo-bucar-cinza.svg" width="40%" alt=""></a>
+        <div class="container">
+            <div class="menu">
+                <span><a href="./index.html">Quem Somos</a></span>
+                <span><a href="./produtos.html">Produtos</a></span>
+                <span><a class="motion-logo" href="./index.html"><img src="./vetores/motion-logo.svg" alt="Logo Motion"></a></span>
+                <span><a href="./pitstop.html"><img src="./vetores/logo-pitstop-colorido.svg" alt="Logo Pitstop"></a></span>
+                <span><a href="./buscar.html"><img src="./vetores/logo-buscar-colorido.svg" alt="Logo Buscar"></a></span>
             </div>
+        </div>
     </header>
 
-<section class="jornada" style="margin-top: 5vh;">
-    <div>
-    <span style="font-family: 'Product-Bold'; color: #474747; font-size: 7vh;">Produtos</span>
-    </div>
+    <section id="section-produtos">
+        <div class="container">
+            <div class="titulo">
+                <h1>Produtos</h1>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="./vetores/logo-pitstop-colorido.svg" alt="">
+                    </div>
+                    <a href="">Conhecer</a>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="./vetores/logo-buscar-colorido.svg" alt="">
+                    </div>
+                    <a href="">Conhecer</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-<div class="jornada" style="margin-top: 5vh; margin-left: -10vh; width: 100%; display: flex; align-items: center; justify-content: center;">
-    <div style="width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5vh;">
-        <img src="./vetores/produto-pitstop.svg" width="70%"  alt="">
-        <a href="./pitstop.html"><button style="background: #C66D2C;
-        border:none ;
-        border-radius: 45px;
-        font-family: Product-Bold;
-        color: #F1EFE9;
-        font-size: 16px;
-        padding: 20px 40px 20px 40px;
-        text-decoration: none;
-        cursor: pointer;"
-        >Conhecer</button></a>
-    </div>
-
-    <div style="width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5vh;">
-        <img src="./vetores/produto-buscar.svg" width="70%"  alt="">
-        <a href="./buscar.html"><button
-        style="background: #315C32;
-        border:none ;
-        border-radius: 45px;
-        font-family: Product-Bold;
-        color: #F1EFE9;
-        font-size: 16px;
-        padding: 20px 40px 20px 40px;
-        text-decoration: none;
-        cursor: pointer;"
-        >Conhecer</button></a>
-    </div>
-</div>
-
-<footer>
-    <div class="container">
-        <img class="img-bg" src="./vetores/footer.svg" alt="">
-        <div class="menu">
-            <div class="img-footer">
-                <img src="./vetores/logo-motion-reduzido.svg" alt="">
-            </div>
-            <div class="links">
-                <div class="somos">
-                    <h3 style="font-family: Product-Bold;">Quem Somos</h3>
-                    <a href="">Soluções</a>
-                    <a href="">Pilares</a>
+    <footer>
+        <div class="container">
+            <img class="img-bg" src="./vetores/fila-carros-footer.svg" alt="Imagem de uma fila de carros">
+            <div class="menu">
+                <div class="img-footer">
+                    <img src="./vetores/logo-motion-reduzido.svg" alt="Logo da motion reduzido">
                 </div>
-                <div  class="produtos">
-                    <h3 style="font-family: Product-Bold;">Produtos</h3>
-                    <a href="">Pitstop</a>
-                    <a href="">Buscar!</a>
-                </div>
-                <div class="contato">
-                    <h3 style="font-family: Product-Bold;">Contato</h3>
-                    <a href="">E-mail</a>
-                    <a href="">Telefones</a>
-                    <a href="">Endereço</a>
-                </div>
-                <div class="logos">
-                    <a href=""><img src="./vetores/logo-pitstop-footer.svg" alt=""></a>
-                    <a href=""><img src="./vetores/logo-buscar-footer.svg" alt=""></a>
-                    <div class="logos-redes">
-                        <a href=""><img src="./vetores/logo-instagram.svg" alt=""></a>
-                        <a href=""><img src="./vetores/logo-linkedin.svg" alt=""></a>
-                        <a href=""><img src="./vetores/logo-github.svg" alt=""></a>
+                <div class="links">
+                    <div class="somos">
+                        <h3>Quem Somos</h3>
+                        <a href="">Soluções</a>
+                        <a href="">Pilares</a>
+                    </div>
+                    <div class="produtos">
+                        <h3>Produtos</h3>
+                        <a href="">Pitstop</a>
+                        <a href="">Buscar!</a>
+                    </div>
+                    <div class="contato">
+                        <h3>Contato</h3>
+                        <a href="">E-mail</a>
+                        <a href="">Telefones</a>
+                        <a href="">Endereço</a>
+                    </div>
+                    <div class="logos">
+                        <a href=""><img src="./vetores/logo-pitstop-footer.svg" alt="Logo do Pitstop"></a>
+                        <a href=""><img src="./vetores/logo-buscar-footer.svg" alt="Logo do Buscar!"></a>
+                        <div class="logos-redes">
+                            <a href=""><img src="./vetores/logo-instagram.svg" alt="Logo do Instagram"></a>
+                            <a href=""><img src="./vetores/logo-linkedin.svg" alt="Logo do Linkedin"></a>
+                            <a href=""><img src="./vetores/logo-github.svg" alt="Logo do Github"></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
+    
 </body>
 </html>

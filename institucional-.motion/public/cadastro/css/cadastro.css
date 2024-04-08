@@ -1,0 +1,295 @@
+:root{
+    --cor-titulo: #3B546C;
+    --cor-subtitulo: #474747;
+    --cor-fundo: #F1EFE9;
+    --cor-menu: #474747;
+    --cor-menu-destaque: #3b546c;
+    --cor-footer: #DFDEDB;
+}
+
+@font-face {
+    font-family: 'Aristotelica';
+    src: url('./../../fontes/aristotelica-text-trial-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Product-Bold';
+    src: url('./../../fontes/Product\ Sans\ Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Product-Regular';
+    src: url('./../../fontes/Product\ Sans\ Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Product-Regular", sans-serif;
+    overflow: hidden;
+}
+
+.background{
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.background img{
+    height: 100vh;
+}
+
+header{
+    height: 200px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+header .img-pitstop{
+    height: 50px;
+    margin-top: 15px;
+}
+
+#sections{
+    width: 100vw;
+    height: calc(100vh - 200px);
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    width: 80%;
+}
+
+#section-steps{
+    width: 300px;
+    height: 90%;
+    padding: 140px 0px;
+}
+
+#section-steps .card{
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+#section-steps .card span{
+    margin-left: 10px;
+    margin-top: 4px;
+    color: #474747;
+    font-size: 18px;
+}
+
+#section-info{
+    width: 100%;
+    height: 90%;
+    background-color: #ebebebea;
+    color: #474747;
+    margin-left: 60px;
+    padding: 70px 100px;
+    border-radius: 60px;
+}
+
+#section-info h1{
+    font-size: 50px;
+}
+
+#section-info .labels{
+    margin-top: 40px;
+}
+
+#section-info input{
+    height: 48px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+#section-info .labels label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#section-info .labels label span{
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+#section-info .linha1{
+    display: flex;
+    justify-content: space-between;
+}
+
+#section-info .linha1 label{
+    display: flex;
+    width: 48%;
+}
+
+#section-info .labels label:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+#section-info .botao-avancar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+/* Cadastro Tela 2 */
+
+#section-info .linha1-c2{
+    display: flex;
+    justify-content: space-between;
+}
+
+#section-info .linha1-c2 label{
+    width: 48%;
+}
+
+#section-info .linha2-c2{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#section-info .linha2-c2 label{
+    margin-right: 15px;
+}
+
+#section-info .linha2-c2 label:nth-child(1){ width: 30%; }
+
+#section-info .linha2-c2 label:nth-child(2){ width: 50%; }
+
+#section-info .linha2-c2 label:nth-child(3){ width: 10%; }
+
+#section-info .linha2-c2 label:nth-child(4){ margin-right: 0px; }
+
+#section-info .linha3-c2{
+    display: flex;
+}
+
+#section-info .linha3-c2 label{ width: 33%; margin-right: 15px; }
+
+#section-info .linha3-c2 label:nth-child(3){ margin-right: 0px; }
+
+
+
+/* Cadastro Tela 3*/
+
+#section-info .container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.plano{
+    width: 400px;
+    height: 500px;
+    margin: 0px 20px;
+}
+
+.plano h3{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #474747;
+}
+
+.plano .box{
+    border: 3px solid #d6d6d6;
+    padding: 30px 30px;
+    border-radius: 40px;
+}
+
+.plano .preco{
+    display: flex;
+    padding-left: 12px;
+}
+
+#section-info .plano .preco h1{
+    font-size: 44px;
+    color: #474747;
+}
+
+.plano .preco p{
+    padding-top: 28px;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #474747;
+    margin-bottom: 20px;
+}
+
+.plano .linha{
+    display: flex;
+    padding: 10px;
+}
+
+.plano .linha p{
+    padding-top: 12px;
+    padding-left: 10px;
+    color: #474747;
+    font-weight: bold;
+}
+
+.plano .linha img{
+    height: 40px;
+}
+
+.plano .botao{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.plano .botao a{
+    padding: 16px 35px;
+    text-decoration: none;
+    border: 3px solid #d4d4d4;
+    border-radius: 30px;
+    color: #474747;
+    font-weight: bold;
+}
+
+/* Cadastro 4 */
+
+#section-info .container-c4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#section-info .concluido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.concluido img{
+    height: 170px;
+}
+
+.concluido h2{
+    margin-top: 20px;
+    font-size: 48px;
+}

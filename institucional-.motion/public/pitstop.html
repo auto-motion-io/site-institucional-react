@@ -1,414 +1,188 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="./vetores/favicon.ico" type="image/x-icon">
-        <title>.motion</title>
-    </head>
-<style>
-    @font-face {
-        font-family: 'Aristotelica';
-        src: url('./fontes/aristotelica-text-trial-bold.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
+<html lang="en">
 
-    @font-face {
-        font-family: 'Product-Bold';
-        src: url('./fontes/Product\ Sans\ Bold.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.Motion - PitStop</title>
+    <link rel="stylesheet" href="./css/pitstop.css">
+</head>
 
-    @font-face {
-        font-family: 'Product-Regular';
-        src: url('./fontes/Product\ Sans\ Regular.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-
-    body{
-        background-color: #F1EFE9;
-        padding-top: 5vh;
-        margin: 0;
-        padding-right:10vw ;
-        padding-left: 10vw;
-        overflow-x: hidden;
-    }
-
-    body::-webkit-scrollbar {
-        width: 8px;
-        height: 3px; 
-    }
-      
-    body::-webkit-scrollbar-track {
-        background: #f3eee3ff;
-        padding: 2px;
-    }
-      
-    body::-webkit-scrollbar-thumb {
-        background-color: #3B546C;
-    }
-    
-    header{
-        width: 100%;
-        height: 120px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        font-family: 'Aristotelica';
-        color: #7a7a7a;
-        font-size: 2.5vh;
-    }
-
-    .cabecalho{
-        padding-left: 4vw;
-    }
-
-    .jornada{
-        padding-left: 4vw;
-    }
-
-    footer {
-        margin-top: 20vh;
-        height: 300px;
-        width: 100%;
-        background-color: transparent;
-        display: flex;
-        justify-content: center;
-        font-family: 'Product-Regular';
-    }
-    
-    footer .container {
-        justify-content: center;
-        align-items: center;
-        position: relative;
-    }
-    
-    footer .container:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    
-    footer .container .img-bg {
-        margin-top: -31px;
-        width: 100vw;
-        position: absolute;
-        z-index: 0;
-    }
-    
-    footer .img-footer img {
-        width: 35vh;
-        margin-right: 5vh;
-    }
-    
-    footer .menu{
-        width: 90%;
-    
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 20vh;
-        z-index: 1;
-    }
-    
-    footer .links{
-        display: flex;
-        justify-content: space-between;
-        width: 800px;
-    }
-    
-    footer .somos, .produtos, .contato, .logos{
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-    }
-    
-    footer .links h3{
-        color: #474747;
-        margin-bottom: 4px;
-    }
-    
-    footer .links a{
-        padding: 6px 0px;
-        text-decoration: none;
-        color: #474747;
-        width: fit-content;
-        transition: all 0.5s;
-    }
-    
-    footer .links a:hover{
-        scale: 1.05;
-    }
-    
-    footer .logos-redes{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 110px;
-        transition: all 0.7s;
-        filter: grayscale(100%);
-    }
-    
-    footer .logos-redes a img:hover,
-    footer .logos a img:hover{
-        filter: grayscale(0%);
-        opacity: 1;
-        scale: 1.1;
-    }
-
-    .container{
-        width: 150vw;
-        display: flex;
-        flex-direction: column;
-    }
-
-
-
-    /* ___________Section Milton_____________*/
-
-#section-milton .container{
-    margin-top: 450px;
-    height: 500px;
-
-    flex-direction: row;
-    display: flex;
-    justify-content: center;
-
-}
-
-.img-milton{
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.img-milton img{
-    height: 350px;
-}
-
-.duvidas{
-    flex: 1.4;
-    padding: 0px 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.duvidas h1, .duvidas h4, .duvidas h6{
-    color: #474747;
-}
-
-.duvidas h4{
-    padding: 5px 0px;
-}
-
-.duvidas h1{
-    font-size: 55px;
-}
-
-.duvidas h6{
-    font-size: 14px;
-    margin-top: 1px;
-    margin-bottom: 10px;
-}
-
-.duvidas input{
-    width: 70%;
-    height: 30px;
-    padding: 20px;
-    border: none;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    background-color: #e6e5e0;
-}
-
-.duvidas label:nth-of-type(3) input {
-    height: 120px;
-}
-
-.duvidas .botao{
-    width: 70%;
-    text-align: center;
-    margin-top: 20px;
-
-}
-
-.duvidas .botao a{
-    padding: 15px 40px;
-    text-decoration: none;
-    border: 3px solid #535353;
-    border-radius: 30px;
-    color: #4e4e4e;
-    font-weight: bold;
-}
-
-input{
-   border:none ;
-        border-radius: 45px;
-        font-family: Product-Bold;
-        background-color: #DCDBD7;
-        font-size: 16px;
-        padding: 15px 40px 15px 40px;
-        text-decoration: none;
-        width: 80%;
-        cursor: pointer;
-        margin-top: -20vh; 
-}
-
-label{
-    font-size: 3vh;
-}
-
-a {
-    color: #696868;
-    text-decoration: none; 
-  }
-</style>
 <body>
+
     <header>
-        <div style="height: 100%; width: 40%; display: flex; align-items: center; justify-content: space-around; "  >
-            <a style="text-decoration: none;" href="./index.html"><span >Quem Somos?</span></a>
-            <a style="text-decoration: none;" href="./produtos.html"><span>Produtos</span></a>
-        </div>
-        <div style=" height: 100%; width: 30%; display: flex; align-items: center; justify-content: center; ">
-            <a href="./index.html"><img  src="./vetores/motion-logo.svg" width="90%" alt="" mat></a>
-        </div>
-            <div style="height: 100%; width: 40%; display: flex; align-items: center; justify-content: space-around;">
-                <a href="./pitstop.html"><img src="./vetores/logo-pitstop-colorido.svg" width="30%" alt="" style="margin-left: 5vh;"></a>
-                <a href="./buscar.html"><img src="./vetores/logo-bucar-cinza.svg" width="40%" alt=""></a>
+        <div class="container">
+            <div class="menu">
+                <span><a href="">Quem Somos</a></span>
+                <span><a href="">Produtos</a></span>
+                <span><a class="motion-logo" href="./index.html"><img src="./vetores/motion-logo.svg"
+                            alt="Logo Motion"></a></span>
+                <span><a class="ativo" href="./pitstop.html"><img src="./vetores/logo-pitstop-colorido.svg"
+                            alt="Logo Pitstop"></a></span>
+                <span><a href="./buscar.html"><img src="./vetores/logo-buscar-colorido.svg" alt="Logo Buscar"></a></span>
             </div>
+        </div>
     </header>
 
-<section style="margin-top: 10vh; display: flex;">
-    <div class="jornada" style="display: flex; flex-direction: column; width: 40%;">
-        <img  src="./vetores/texto-pit1.svg" alt="">
-        <a href="./cadastro1.html"><button style="background: #C66D2C;
-        border:none ;
-        border-radius: 45px;
-        font-family: Product-Bold;
-        color: #F1EFE9;
-        font-size: 16px;
-        padding: 20px 40px 20px 40px;
-        text-decoration: none;
-        width: 30%;
-        cursor: pointer;
-        margin-top: -5vh;
-        "
-        >Cadastrar</button></a>
-    </div>
-
-    <div style="margin-top: -30vh; margin-left: -20vh; z-index: -1;">
-    <img src="./vetores/pista-pitstop.svg" alt="">
-    </div>
-    </section>
-
-    <section style="margin-top: -150vh; margin-left: 20vh;">
-        <img src="./vetores/modulos.svg" alt="">
-    </section>
-
-    <section style="margin-top: 30vh; margin-left: -5vh;">
-        <div style="display: flex; flex-direction: column; width: 100%;  align-items: center; justify-content: center; gap: 7vh;">
-            <img  src="./vetores/impulsione.svg" width="80%" alt="">
-            <a href="./buscar.html" style=" margin-left: -5vh;"><button style="background: #C66D2C;
-            border:none ;
-            border-radius: 45px;
-            font-family: Product-Bold;
-            color: #F1EFE9;
-            font-size: 16px;
-            padding: 20px 40px 20px 40px;
-            text-decoration: none;
-            width: 100%;
-            margin-top: -5vh;
-            cursor: pointer;
-            "
-            >Conhecer</button></a>
-        </div>
-    </section>
-
-    <section style="margin-top: 30vh;">
-        <div style="display: flex; flex-direction: column; width: 100%;  align-items: center; justify-content: center; gap: 7vh;">
-            <img  src="./vetores/planos.svg" width="70%" alt="">
-        </div>
-    </section>
-
-
-    <section style="margin-bottom: 30vh; font-family: 'Product-Bold';gap: 10vh; margin-top: 20vh; width: 100%; display: flex; align-items: center;justify-content: center;">
-        <div>
-            <img src="./vetores/milton.svg" alt="">
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 2vh;">
-            <img src="./vetores/duvidas.svg" alt="">
-            <label for="Nome" style="margin-top: 5vh;">
-                <input style="font-size: 13px;" type="text" id="input_nome" placeholder="Nome">
-            </label>
-            <label for="Email">
-                
-                <input style="font-size: 13px;" type="email" id="input_email" placeholder="E-mail">
-            </label>
-            <label for="Mensagem" >
-                
-                <input style="font-size: 13px;" type="text" id="input_mensagem" placeholder="Mensagem">
-            </label>
-            <button onclick="sendMail()"
-            style="border:none ;
-            border-radius: 45px;
-            font-family: Product-Bold;
-            background-color: #3B546C;
-            color: #F1EFE9;
-            font-size: 16px;
-            padding: 15px 40px 15px 40px;
-            text-decoration: none;
-            width: 30%;
-            cursor: pointer;
-            margin-top: 2vh;
-            ">Enviar</button>
-        </div>
-    </section>
-   
-
-<footer>
-    <div class="container">
-        <img class="img-bg" src="./vetores/footer.svg" alt="">
-        <div class="menu">
-            <div class="img-footer">
-                <img src="./vetores/logo-motion-reduzido.svg" alt="">
+    <section id="section-banner">
+        <div class="container">
+            <div class="banner-texto">
+                <span><b>A solução</b> completa <br>
+                    para <b>otimizar sua <br>
+                        oficina</b> começa com <br>
+                    um <img src="./vetores/pitstop-laranja.svg" alt="Logo Pitstop Laranja"></span>
+                <div class="botao-cadastro"><a href="./cadastro/cadastro1.html">Cadastrar</a></div>
             </div>
-            <div class="links">
-                <div class="somos">
-                    <h3 style="font-family: Product-Bold;">Quem Somos</h3>
-                    <a href="">Soluções</a>
-                    <a href="">Pilares</a>
+        </div>
+        <div class="img-banner">
+            <img src="./vetores//pista-pitstop.svg" alt="Imagem da Pista de Corrida">
+        </div>
+    </section>
+
+    <section id="section-modulos">
+        <div class="container">
+            <div class="modulo-texto">
+                <p>Com módulos <b>intuitivos</b> é <b>você no <br>
+                        controle</b> total do seu negócio</p>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="img-card"><img src="./vetores/tarefas.svg"
+                            alt="Imagem para indicar tarefas"></div>
+                    <h1>Tarefas</h1>
                 </div>
-                <div  class="produtos">
-                    <h3 style="font-family: Product-Bold;">Produtos</h3>
-                    <a href="">Pitstop</a>
-                    <a href="">Buscar!</a>
+                <div class="card">
+                    <div class="img-card"><img src="./vetores/financeiro.svg"
+                            alt="Imagem para indicar o financeiro"></div>
+                    <h1>Financeiro</h1>
                 </div>
-                <div class="contato">
-                    <h3 style="font-family: Product-Bold;">Contato</h3>
-                    <a href="">E-mail</a>
-                    <a href="">Telefones</a>
-                    <a href="">Endereço</a>
+                <div class="card">
+                    <div class="img-card"><img src="./vetores/ordem-de-servico.svg"
+                            alt="Imagem para indicar as ordens de serviço"></div>
+                    <h1>Ordens de Serviço</h1>
                 </div>
-                <div class="logos">
-                    <a href=""><img src="./vetores/logo-pitstop-footer.svg" alt=""></a>
-                    <a href=""><img src="./vetores/logo-buscar-footer.svg" alt=""></a>
-                    <div class="logos-redes">
-                        <a href=""><img src="./vetores/logo-instagram.svg" alt=""></a>
-                        <a href=""><img src="./vetores/logo-linkedin.svg" alt=""></a>
-                        <a href=""><img src="./vetores/logo-github.svg" alt=""></a>
+                <div class="card">
+                    <div class="img-card"><img src="./vetores/servico.svg"
+                            alt="Imagem para indicar os serviços"></div>
+                    <h1>Serviços</h1>
+                </div>
+                <div class="card">
+                    <div class="img-card"><img src="./vetores/estoque.svg"
+                            alt="Imagem para indicar oestoque"></div>
+                    <h1>Estoque</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-impulsione">
+        <div class="container">
+            <div class="impulsione-texto">
+                <p><b>Impulsione</b> ainda mais seu negócio com o <img src="./vetores/buscar-logo.svg"
+                        alt="Imagem que representa o produto buscar!"></p>
+            </div>
+            <a href="">Conhecer</a>
+        </div>
+    </section>
+
+    <section id="section-planos">
+        <div class="container">
+            <div class="plano">
+               <h3>Plano Básico</h3>
+                <div class="box">
+                     <div class="preco">
+                        <h1>R$300</h1>
+                        <p>/por mês</p>
+                    </div>
+                    <div class="linha">
+                        <img src="./vetores/check-concluido.svg" alt="Imagem de Confirmação">
+                        <p>Módulos Completos</p>
+                    </div>
+                    <div class="linha">
+                        <img src="./vetores/check-concluido.svg" alt="Imagem de Confirmação">
+                        <p>Relatórios e Dashboards</p>
+                    </div>
+                    <div class="linha">
+                        <img src="./vetores/check-nao-concluido.svg" alt="Imagem X">
+                        <p>Impulsionamento com Buscar!</p>
+                    </div>
+                    <div class="linha">
+                        <img src="./vetores/check-nao-concluido.svg" alt="Imagem X">
+                        <p>Integração com o Whatsapp</p>
+                    </div>
+                </div>
+                <div class="botao">
+                    <a href="">Escolher</a>
+                </div>
+            </div>
+            <div class="plano">
+                <h3>Plano Buscar!</h3>
+                <div class="box">
+                    <div class="preco">
+                        <h1>R$300</h1>
+                        <p>/por mês</p>
+                    </div>
+                    <div class="linha">
+                        <img src="./vetores/check-concluido.svg" alt="Imagem de Confirmação">
+                        <p>Módulos Completos</p>
+                    </div>
+                    <div class="linha">
+                        <img src="./vetores/check-concluido.svg" alt="Imagem de Confirmação">
+                        <p>Relatórios e Dashboards</p>
+                    </div>
+                    <div class="linha">
+                        <img src="./vetores/check-concluido.svg" alt="Imagem de Confirmação">
+                        <p>Impulsionamento com Buscar!</p>
+                    </div>
+                    <div class="linha">
+                        <img src="./vetores/check-concluido.svg" alt="Imagem de Confirmação">
+                        <p>Integração com o Whatsapp</p>
+                    </div>
+                </div>
+                <div class="botao">
+                    <a href="">Escolher</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <img class="img-bg" src="./vetores/fila-carros-footer.svg" alt="">
+            <div class="menu">
+                <div class="img-footer">
+                    <img src="./vetores/logo-motion-reduzido.svg" alt="">
+                </div>
+                <div class="links">
+                    <div class="somos">
+                        <h3>Quem Somos</h3>
+                        <a href="">Soluções</a>
+                        <a href="">Pilares</a>
+                    </div>
+                    <div class="produtos">
+                        <h3>Produtos</h3>
+                        <a href="">Pitstop</a>
+                        <a href="">Buscar!</a>
+                    </div>
+                    <div class="contato">
+                        <h3>Contato</h3>
+                        <a href="">E-mail</a>
+                        <a href="">Telefones</a>
+                        <a href="">Endereço</a>
+                    </div>
+                    <div class="logos">
+                        <a href=""><img src="./vetores/logo-pitstop-footer.svg" alt=""></a>
+                        <a href=""><img src="./vetores/logo-buscar-footer.svg" alt=""></a>
+                        <div class="logos-redes">
+                            <a href=""><img src="./vetores/logo-instagram.svg" alt=""></a>
+                            <a href=""><img src="./vetores/logo-linkedin.svg" alt=""></a>
+                            <a href=""><img src="./vetores/logo-github.svg" alt=""></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
-</html>
 
-<script src="./funcoes.js"></script>
+</html>
