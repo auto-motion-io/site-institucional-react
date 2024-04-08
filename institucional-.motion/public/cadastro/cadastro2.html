@@ -7,7 +7,6 @@
     <title>Cadastro - PitStop</title>
     <link rel="stylesheet" href="./../cadastro/css/cadastro.css">
 </head>
-
 <body>
     <div class="background">
         <img src="./../vetores/listra-bg.svg" alt="">
@@ -54,12 +53,12 @@
                     </div>
                     <div class="linha2-c2">
                         <label for="">
-                            <span>CEP:</span>
-                            <input type="text">
+                            <span>CEP: <span id="message_cep"></span></span>
+                            <input id="ipt_cep" type="text">
                         </label>
                         <label for="">
                             <span>Logradouro:</span>
-                            <input type="text">
+                            <input id="ipt_logradouro" type="text">
                         </label>
                         <label for="">
                             <span>N°:</span>
@@ -67,21 +66,21 @@
                         </label>
                         <label for="">
                             <span>Comp:</span>
-                            <input type="text">
+                            <input id="ipt_comp" type="text">
                         </label>
                     </div>
                     <div class="linha3-c2">
                         <label for="">
                             <span>Bairro:</span>
-                            <input type="text">
+                            <input id="ipt_bairro" type="text">
                         </label>
                         <label for="">
                             <span>Cidade:</span>
-                            <input type="text">
+                            <input id="ipt_cidade" type="text">
                         </label>
                         <label for="">
                             <span>Estado:</span>
-                            <input type="text">
+                            <input id="ipt_estado" type="text">
                         </label>
                     </div>
                 </div>
@@ -91,6 +90,7 @@
             </section>
         </div>
     </div>
+    <script src="./js/cadastro.js"></script>
 </body>
 
 </html>
