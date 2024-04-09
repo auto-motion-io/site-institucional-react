@@ -1,5 +1,35 @@
 /* Responsividade */
 
+:root{
+    --cor-titulo: #3B546C;
+    --cor-subtitulo: #474747;
+    --cor-fundo: #F1EFE9;
+    --cor-menu: #474747;
+    --cor-menu-destaque: #3b546c;
+    --cor-footer: #DFDEDB;
+}
+
+@font-face {
+    font-family: 'Aristotelica';
+    src: url('./../fontes/aristotelica-text-trial-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Product-Bold';
+    src: url('./../fontes/Product\ Sans\ Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Product-Regular';
+    src: url('./../fontes/Product\ Sans\ Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @media only screen and (max-width: 425px) {
 
     /* Header */
@@ -11,7 +41,6 @@
     header .header-text{
         display: none;
     }
-    
 
     header .motion-logo img{
         display: block;
@@ -66,13 +95,6 @@
         font-size: 24px;
     }
 
-    /* Section Barra*/
-
-    #section-barra {
-        width: 67%;
-        height: 65px;
-    }
-
     /* Section Pilares */
 
     #section-pilares .container{
@@ -110,12 +132,43 @@
         height: 120px;
     }
 
-    /* Section Barra 2 */
+    /* Section Milton */
 
-    #section-barra-2 {
-        width: 67%;
-        height: 65px;
-        margin-top: 50px;
+    #section-milton{
+        height: 900px;
+    }
+
+    #section-milton .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #section-milton .img-milton img{
+        height: 300px;
+    }
+
+    #section-milton .duvidas{
+        padding: 0px 20px;
+        margin-top: 30px;
+        width: 90%;
+    }
+
+    #section-milton .duvidas input{
+        width: 100%;
+    }
+
+    .duvidas .botao{
+        width: 100%;
+    }
+
+    #section-milton h4{
+        font-size: 18px;
+    }
+
+    #section-milton h1{
+        font-size: 30px;
+        margin-bottom: 20px;
     }
 
     /* Footer */
@@ -169,7 +222,7 @@
     }
 }
 
-@media only screen and (min-width: 425px) and (max-width: 1024px){
+@media only screen and (min-width: 426px) and (max-width: 768px){
 
 
 
@@ -272,4 +325,249 @@
         padding: 0;
         padding-bottom: 2px;
     }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+
+    /* Section Jornada */
+
+    #section-jornada .texto h5{
+        font-size: 38px;
+    }
+
+    /* Section Pilares */
+
+    #section-pilares .container{
+        padding-left: 0;
+    }
+
+    #section-pilares h1{
+        font-size: 32px;
+        text-align: center;
+    }
+
+    #section-pilares .imagens{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 60px;
+    }
+    
+    #section-pilares .card{
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 60px;
+        border-bottom: 2px solid #cfcfcf;
+        padding-bottom: 40px;
+    }
+
+    #section-pilares .card:nth-child(3) {
+        padding-left: 0px;
+        border-bottom: none;
+    }
+
+    #section-pilares .card img{
+        height: 180px;
+    }
+
+    
+    /* Section Milton */
+
+    #section-milton{
+        height: 900px;
+    }
+
+    #section-milton .container{
+        justify-content: center;
+        align-items: center;
+    }
+
+    #section-milton .img-milton img{
+        height: 300px;
+    }
+
+    #section-milton .duvidas{
+        padding: 0px 20px;
+        margin-top: 30px;
+        width: 90%;
+    }
+
+    #section-milton .duvidas input{
+        width: 100%;
+    }
+
+    .duvidas .botao{
+        width: 100%;
+    }
+
+    #section-milton h4{
+        font-size: 18px;
+    }
+
+    #section-milton h1{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    /* Footer */
+
+    footer{
+        margin-top: 200px;
+        padding: 0;
+        background-color: #EAE8E2;
+        height: 210px;
+    }
+
+    footer .container{
+        justify-content: flex-start;
+    }
+
+    footer .img-bg{
+        margin: 0;
+        padding: 0;
+        top: -100px;
+    }
+
+    footer .menu{
+        margin-top: 60px;
+    }
+
+    footer .menu .img-footer img{
+        width: 170px;
+        margin-bottom: 50px;
+        margin-right: 30px;
+    }
+
+    footer .links{
+        width: 520px;
+    }
+
+    footer .card{
+        font-size: 16px;
+    }
+
+    footer .card a{
+        margin-bottom: 5px;
+    }
+
+    footer .logos a{
+        padding: 0;
+        padding-bottom: 2px;
+    }
+
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px){
+    
+    /* Section-Titulo */
+
+    #section-titulo{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    #section-titulo .container{
+        padding: 0px 30px;
+    }
+
+    #section-titulo h1{
+        font-size: 56px;
+    }
+
+    #section-titulo h6{
+        font-size: 50px;
+        text-align: left;
+    }
+
+    /* Section Jornada */
+
+    #section-jornada .texto h5{
+        font-size: 46px;
+    }
+
+    /* Section Pilares */
+
+    #section-pilares .container{
+        padding-left: 0;
+    }
+
+    #section-pilares h1{
+        font-size: 32px;
+        text-align: center;
+    }
+
+    #section-pilares .imagens{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 60px;
+    }
+    
+    #section-pilares .card{
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 60px;
+        border-bottom: 2px solid #cfcfcf;
+        padding-bottom: 40px;
+    }
+
+    #section-pilares .card:nth-child(3) {
+        padding-left: 0px;
+        border-bottom: none;
+    }
+
+    #section-pilares .card img{
+        height: 180px;
+    }
+
+     /* Footer */
+
+     footer{
+        margin-top: 270px;
+        padding: 0;
+        background-color: #EAE8E2;
+        height: 210px;
+    }
+
+    footer .container{
+        justify-content: flex-start;
+    }
+
+    footer .img-bg{
+        margin: 0;
+        padding: 0;
+        top: -100px;
+    }
+
+    footer .menu{
+        margin-top: 60px;
+    }
+
+    footer .menu .img-footer img{
+        width: 200px;
+        margin-bottom: 50px;
+        margin-right: 30px;
+    }
+
+    footer .links{
+        width: 520px;
+    }
+
+    footer .card{
+        font-size: 16px;
+    }
+
+    footer .card a{
+        margin-bottom: 5px;
+    }
+
+    footer .logos a{
+        padding: 0;
+        padding-bottom: 2px;
+    }
+
 }
