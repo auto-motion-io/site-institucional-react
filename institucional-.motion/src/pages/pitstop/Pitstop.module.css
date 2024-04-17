@@ -1,120 +1,15 @@
-:root{
-    --cor-titulo: #3B546C;
-    --cor-subtitulo: #474747;
-    --cor-fundo: #F1EFE9;
-    --cor-menu: #474747;
-    --cor-menu-destaque: #3b546c;
-    --cor-footer: #DFDEDB;
 
-}
-
-@font-face {
-    font-family: 'Aristotelica';
-    src: url('./../fontes/aristotelica-text-trial-bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Product-Bold';
-    src: url('./../fontes/Product\ Sans\ Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Product-Regular';
-    src: url('./../fontes/Product\ Sans\ Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Product-Regular';
-}
-
-body{
-    background-color: var(--cor-fundo);
+.body{
+    width: 99vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
-    width:100vw;
 }
 
 .container{
-    width: 80vw;
+    width: 85vw;
     display: flex;
     flex-direction: column;
-}
-
-/* ____________HEADER_____________*/
-
-header{
-    margin-top: 80px;
-}
-
-header .container{
-    display: flex;
-    justify-content: space-between;
-}
-
-.menu{
-    display: flex;
-}
-
-header span{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-}
-
-header a{
-    font-family: 'Aristotelica';
-    font-size: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--cor-menu);
-    opacity: 0.7;
-    filter: grayscale(100%);
-    transition: all 0.4s;
-}
-
-header a:hover,
-header a img:hover{
-    filter: grayscale(0%);
-    opacity: 1;
-    scale: 1.05;
-}
-
-header .ativo{
-    filter: grayscale(0%);
-    opacity: 1;
-}
-
-header img{
-    width: 80px;
-    transition: all 0.4s;
-}
-
-header img:nth-child(1){
-    margin-right: 30px;
-}
-
-
-header .motion-logo{
-    filter: grayscale(0%);
-    opacity: 1;
-}
-
-header .motion-logo img{
-    width: 170px;
-    margin-bottom: 15px;
 }
 
 /* ______________Section Banner___________________ */
@@ -123,6 +18,7 @@ header .motion-logo img{
     width: 100%;
     display: flex;
     justify-content: center;
+    font-family: 'Product-Regular';
 }
 
 #section-banner .container{
@@ -175,6 +71,7 @@ header .motion-logo img{
 #section-modulos .container{
     justify-content: center;
     align-items: center;
+    font-family: 'Product-Regular';
 }
 
 .modulo-texto{
@@ -221,6 +118,7 @@ header .motion-logo img{
 
 #section-impulsione{
     margin-top: 220px;
+    font-family: 'Product-Regular';
 }
 
 #section-impulsione .container{
@@ -259,9 +157,11 @@ header .motion-logo img{
 
 #section-planos .container{
     margin-top: 100px;
+    margin-bottom: 430px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    font-family: 'Product-Regular';
 }
 
 .plano{
@@ -337,102 +237,4 @@ header .motion-logo img{
 
 .plano:nth-child(2) .botao a{
     border: 3px solid #C66D2C;
-}
-
-/* ________________Footer__________________ */
-
-footer {
-    margin-top: 400px;
-    height: 300px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-family: 'Product-Regular';
-}
-
-footer .container {
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-footer .container:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-footer .container .img-bg {
-    margin-top: 0px;
-    width: 100vw;
-    position: absolute;
-    z-index: 0;
-}
-
-footer .img-footer img {
-    width: 300px;
-}
-
-footer .menu{
-    width: 90%;
-
-    display: flex;
-    justify-content: space-around;
-    margin-top: 200px;
-    font-size: 18px;
-    z-index: 1;
-}
-
-footer .links{
-    display: flex;
-    justify-content: space-between;
-    width: 800px;
-}
-
-footer .card{
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-footer .card, .logos{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-footer .links h3{
-    color: #474747;
-    margin-bottom: 4px;
-}
-
-footer .links a{
-    padding: 6px 0px;
-    text-decoration: none;
-    color: #474747;
-    width: fit-content;
-    transition: all 0.5s;
-}
-
-footer .links a:hover{
-    scale: 1.05;
-}
-
-footer .logos-redes{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 110px;
-    transition: all 0.7s;
-    filter: grayscale(100%);
-}
-
-footer .logos-redes img{
-    height: 40px;
-}
-
-footer .logos-redes a img:hover,
-footer .logos a img:hover{
-    filter: grayscale(0%);
-    opacity: 1;
-    scale: 1.1;
 }

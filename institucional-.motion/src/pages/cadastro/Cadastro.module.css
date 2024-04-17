@@ -1,0 +1,132 @@
+
+.body{
+    overflow: hidden;
+}
+
+.background{
+    right: 0;
+    position: absolute;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background img{
+    height: 100vh;
+}
+
+.header{
+    height: 130px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-top: 2%;
+}
+
+.header a:nth-child(1){
+    width: 40px;
+}
+
+.header a:nth-child(2){
+    cursor: none;
+}
+
+.header .img-pitstop{
+    height: 40px;
+    margin-top: 15px;
+}
+
+#sections{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    width: 80%;
+}
+
+#section-steps{
+    width: 300px;
+    height: 100px;
+    padding: 100px 0px;
+    font-family: 'Product-Regular';
+}
+
+#section-steps .card{
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+#section-steps .card span{
+    margin-left: 10px;
+    margin-top: 4px;
+    color: #474747;
+    font-size: 16px;
+}
+
+#section-info{
+    width: 100%;
+    height: 95%;
+    background-color: #e6e1daea;
+    color: #474747;
+    margin-left: 60px;
+    padding: 70px 90px;
+    border-radius: 60px;
+    font-family: 'Product-Regular';
+}
+
+#section-info h1{
+    font-size: 32px;
+}
+
+#section-info .labels{
+    margin-top: 40px;
+}
+
+#section-info input{
+    height: 38px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+#section-info .labels label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#section-info .labels label span{
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+#section-info .linha1{
+    display: flex;
+    justify-content: space-between;
+}
+
+#section-info .linha1 label{
+    display: flex;
+    width: 48%;
+}
+
+#section-info .labels label:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+#section-info .botao-avancar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
