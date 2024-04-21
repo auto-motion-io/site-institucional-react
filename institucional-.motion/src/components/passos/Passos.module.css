@@ -1,0 +1,20 @@
+
+#section-steps{
+    width: 300px;
+    height: 100px;
+    padding: 100px 0px;
+    font-family: 'Product-Regular';
+}
+
+#section-steps .card{
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+#section-steps .card span{
+    margin-left: 10px;
+    margin-top: 4px;
+    color: #474747;
+    font-size: 16px;
+}

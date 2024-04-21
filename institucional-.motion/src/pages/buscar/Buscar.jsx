@@ -1,10 +1,13 @@
 import React from "react";
 import styles from "./Buscar.module.css";
 import images from "./../../utils/imagesExports";
+import Header from "./../../components/header/Header"
+import Footer from "./../../components/footer/Footer"
 
 const Buscar = () => {
     return (
         <div className={styles["body"]}>
+            <Header/>
             <section id={styles["section-pesquisa"]}>
                 <div className={styles["container"]}>
                     <div className={styles["mensagem-principal"]}>
@@ -85,6 +88,7 @@ const Buscar = () => {
                     <a href="">Acessar o <img src={images.logoBuscarColorido} alt="Logo do Buscar"/></a>
                 </div>
             </section>
+            <Footer/>
         </div>
     );
 };

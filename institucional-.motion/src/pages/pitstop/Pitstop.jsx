@@ -1,11 +1,18 @@
 import React from "react";
 import styles from "./Pitstop.module.css";
 import images from "./../../utils/imagesExports"
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Header from "./../../components/header/Header"
+import Footer from "./../../components/footer/Footer"
 
 const Pitstop = () => {
+    const navigate = useNavigate();
+    function mudarPagina(nomePagina){
+        navigate(nomePagina);
+    }
     return (
         <div className={styles["body"]}>
+            <Header/>
             <section id={styles["section-banner"]}>
                 <div className={styles["container"]}>
                     <div className={styles["banner-texto"]}>
@@ -13,7 +20,7 @@ const Pitstop = () => {
                             para <b>otimizar sua <br />
                                 oficina</b> começa com <br />
                             um <img src={images.pitstopLaranja} alt="Logo Pitstop Laranja" /></span>
-                        <div className={styles["botao-cadastro"]}><Link to="/cadastro" href="./cadastro/cadastro1.html">Cadastrar</Link></div>
+                        <div className={styles["botao-cadastro"]}><a onClick={() => mudarPagina("/cadastro")}>Cadastrar</a></div>
                     </div>
                 </div>
                 <div className={styles["img-banner"]}>
@@ -127,6 +134,7 @@ const Pitstop = () => {
                     </div>
                 </div>
             </section>
+            <Footer/>
         </div>
     );
 };

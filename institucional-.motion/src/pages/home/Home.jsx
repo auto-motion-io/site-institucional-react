@@ -1,11 +1,14 @@
 import React from "react";
 import styles from "./Home.module.css";
 import images from "./../../utils/imagesExports"
+import Header from "./../../components/header/Header"
+import Footer from "./../../components/footer/Footer"
 
 const Home = () => {
    
     return (
         <div className={styles["body"]}>
+            <Header/>
             <section id={styles["section-titulo"]}>
                 <div className={styles["container"]}>
                     <div className={styles["textos"]}>
@@ -98,6 +101,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            <Footer/>
         </div>
     );
 };

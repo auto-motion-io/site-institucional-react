@@ -1,0 +1,63 @@
+
+#section-info{
+    width: 100%;
+    height: 95%;
+    background-color: #e6e1daea;
+    color: #474747;
+    margin-left: 60px;
+    padding: 70px 90px;
+    border-radius: 60px;
+    font-family: 'Product-Regular';
+}
+
+#section-info h1{
+    font-size: 32px;
+}
+
+#section-info .labels{
+    margin-top: 30px;
+}
+
+#section-info input{
+    height: 38px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+#section-info .labels label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#section-info .labels label span{
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+#section-info .linha1{
+    display: flex;
+    justify-content: space-between;
+}
+
+#section-info .linha1 label{
+    display: flex;
+    width: 48%;
+}
+
+#section-info .labels label:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+#section-info .botao-avancar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}

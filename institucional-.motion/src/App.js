@@ -1,14 +1,15 @@
-import { Outlet } from 'react-router-dom';
-import Header from "./pages/components/header/Header"
-import Footer from "./pages/components/footer/Footer"
+import React from "react";
+import "./utils/globals.css"
+import Rotas from "./routes";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
-      <div className="App">
-        <Header/>
-        <Outlet/>
-        <Footer/>
-      </div>
+    <>
+      <Rotas />
+      <ToastContainer />
+    </>
   );
 }
 
