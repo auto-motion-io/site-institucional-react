@@ -45,12 +45,13 @@ header a:hover,
 header a img:hover{
     filter: grayscale(0%);
     opacity: 1;
-    scale: 1.1;
+    scale: 1.02;
 }
 
 header img{
     width: 70px;
-    transition: all 0.4s;
+    transition: all 0.2s;
+    cursor: pointer;
 }
 
 header img:nth-child(1){
