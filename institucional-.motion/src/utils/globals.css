@@ -1,40 +1,58 @@
-:root{
-    --azul-motion: #3B546C;
-    --texto-header: #949390;
-    --sub: #474747;
-    --label-milton: #474747b0;
-    --btn-milton: #B7B6B3;
-    --bg: #EAE8E2;
-    --fundo: #f5f5f5;
+:root {
+  --azul-motion: #3b546c;
+  --texto-header: #949390;
+  --sub: #474747;
+  --label-milton: #474747b0;
+  --btn-milton: #b7b6b3;
+  --bg: #eae8e2;
+  --fundo: #f5f5f5;
 }
 
 @font-face {
-    font-family: 'Aristotelica';
-    src: url('./../utils/fonts/aristotelica-text-trial-bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Aristotelica";
+  src: url("./../utils/fonts/aristotelica-text-trial-bold.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Product-Bold';
-    src: url('./../utils/fonts/Product\ Sans\ Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Product-Bold";
+  src: url("./../utils/fonts/Product\ Sans\ Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Product-Regular';
-    src: url('./../utils/fonts/Product\ Sans\ Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Product-Regular";
+  src: url("./../utils/fonts/Product\ Sans\ Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: var(--fundo);
+body {
+  background-color: var(--fundo);
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--azul-motion);
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #253f54;
 }
