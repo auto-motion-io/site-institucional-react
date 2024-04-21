@@ -62,6 +62,7 @@ import setaVoltar from './assets/seta-voltar.svg';
 import tarefas from './assets/tarefas.svg';
 import telefones from './assets/telefone.svg';
 import whatsapp from './assets/whatsapp.svg';
+import botaoX from './assets/botaoX.svg';
 
 const images = {
     buscarLogo,
@@ -127,7 +128,8 @@ const images = {
     setaVoltar,
     tarefas,
     telefones,
-    whatsapp
+    whatsapp,
+    botaoX
 }
 
 export default images;

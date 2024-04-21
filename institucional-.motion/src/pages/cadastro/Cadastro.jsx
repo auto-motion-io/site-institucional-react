@@ -2,10 +2,36 @@ import React, { useState } from "react";
 import styles from "./Cadastro.module.css";
 import images from "./../../utils/imagesExports"
 import Passos from "./../../components/passos/Passos"
-import Formulario from "../../components/formulario/Formulario";
+import FormularioResponsavel from "./../../components/formulario/FormularioResponsavel"
+import FormularioEmpresa from "./../../components/formulario/FormularioEmpresa"
+import FormularioPlanos from "./../../components/formulario/FormularioPlanos"
+import FormularioConcluido from "./../../components/formulario/FormularioConcluido"
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Cadastro = () => {
-    const [qtdConcluido, setQtdConcluido] = useState(0);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const { form, qtdConcluido, data } = location.state || {};
+    var novoForm = <FormularioResponsavel/>
+    switch(form){
+        case 1:{
+            novoForm = <FormularioEmpresa data={data}/>
+            break;
+        }
+        case 2:{
+            novoForm = <FormularioPlanos data={data}/>
+            break;
+        }
+        case 3:{
+            novoForm = <FormularioConcluido data={data}/>
+            break;
+        }
+    }
+
+    function voltarPitstop(){
+        navigate("/pitstop");
+    }
+
     return (
         <div className={styles["body"]}>
             <div className={styles["background"]}>
@@ -13,14 +39,14 @@ const Cadastro = () => {
             </div>
 
             <div className={styles["header"]}>
-                <a href=""><img src={images.setaVoltar} alt="Seta de Voltar" /></a>
-                <a href=""><img className={styles["img-pitstop"]} src={images.logoPitstopColorido} alt="Logo Pitstop" /></a>
+                <a onClick={voltarPitstop}><img src={images.setaVoltar} alt="Seta de Voltar" /></a>
+                <a onClick={voltarPitstop}><img className={styles["img-pitstop"]} src={images.logoPitstopColorido} alt="Logo Pitstop" /></a>
             </div>
 
             <div id={styles["sections"]}>
                 <div className={styles["container"]}>
                     <Passos qtdConcluido={qtdConcluido}/>
-                    <Formulario tipo={"Responsavel"} atualizarQtdConcluido={setQtdConcluido}/>
+                    {novoForm}
                 </div>
             </div>
         </div>

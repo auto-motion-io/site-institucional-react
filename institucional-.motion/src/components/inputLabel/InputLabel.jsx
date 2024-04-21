@@ -8,7 +8,7 @@ const InputLabel = ({nome, type = "text", tamanho, value, onChange}) => {
         <div className={styles.inputLabel} style={{width: tamanho}}>
             <label>
                 <span>{nome}</span>
-                <input type={type} value={value} onChange={onChange}/>
+                <input type={type} onChange={onChange}/>
             </label>
         </div>
     );
