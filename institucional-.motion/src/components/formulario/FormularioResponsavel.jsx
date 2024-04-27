@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styles from "./Formulario.module.css";
 import images from "../../utils/imagesExports";
 import InputLabel from "../inputLabel/InputLabel";
-import FormularioEmpresa from "./../formulario/FormularioEmpresa"
+import {inputMascaraTelefoneCelular, verificaEmail} from "../../utils/global.js"
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
@@ -12,20 +12,26 @@ const Formulario = () => {
     const [nome, setNome] = useState("");
     const [sobrenome, setSobrenome] = useState("");
     const [telefone, setTelefone] = useState("");
-    const [nomeEmpresa, setNomeEmpresa] = useState("");
-    const [cnpj, setCnpj] = useState("");
-    const [cep, setCep] = useState("");
-    const [comp, setComp] = useState("");
-    const [logradouro, setLogradouro] = useState("");
-    const [numero, setNumero] = useState("");
-    const [bairro, setBairro] = useState("");
-    const [cidade, setCidade] = useState("");
-    const [estado, setEstado] = useState("");
 
     const navigate = useNavigate();
 
+    var regex = /[^\w\s]/gi;
+
     function verificarCamposPreenchidos() {
-        return email !== "" && nome !== "" && sobrenome !== "" && telefone !== "";
+        if(email !== "" || nome !== "" || sobrenome !== "" || telefone !== ""){
+            if(!verificaEmail(email)){
+                toast.warning("E-mail invalido!", {
+                    autoClose: 2000
+                })
+                return false;
+            }
+        } else{
+            toast.error("Preencha todos os campos", {
+                autoClose: 2000
+            })
+            return false;
+        }
+        return true
     }
 
     function mudarPagina() {
@@ -42,9 +48,9 @@ const Formulario = () => {
                     }
                 }
             });
-        } else {
-            toast.warning("Preencha todos os campos");
-        }
+        } 
+
+        console.log(telefone)
     }
 
     return (
@@ -58,10 +64,10 @@ const Formulario = () => {
                     <InputLabel nome={"Nome"} tamanho={"49%"} value={nome} onChange={(e) => setNome(e.target.value)} />
                     <InputLabel nome={"Sobrenome"} tamanho={"49%"} value={sobrenome} onChange={(e) => setSobrenome(e.target.value)} />
                 </div>
-                <InputLabel nome={"Telefone"} tamanho={"50%"} value={telefone} onChange={(e) => setTelefone(e.target.value)} />
+                <InputLabel nome={"Telefone"} tamanho={"50%"} value={telefone} maxLenght={15} onInput={inputMascaraTelefoneCelular} onChange={(e) => setTelefone(e.target.value.replace(regex, ""))} />
             </div>
             <div className={styles["botao-avancar"]}>
-                <a onClick={mudarPagina}><img src={images.setaSeguir} alt="Seta de Seguir" /></a>
+                <a style={{cursor:"pointer"}} onClick={mudarPagina}><img src={images.setaSeguir} alt="Seta de Seguir" /></a>
             </div>
         </section>
     );

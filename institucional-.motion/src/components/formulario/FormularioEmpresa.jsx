@@ -5,6 +5,8 @@ import images from "../../utils/imagesExports";
 import InputLabel from "../inputLabel/InputLabel";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import "./../../utils/global"
+import { inputMascaraCPF_CNPJ, inputMascaraCep } from "./../../utils/global";
 
 const FormularioEmpresa = ({data}) => {
     const [nomeEmpresa, setNomeEmpresa] = useState("");
@@ -17,7 +19,11 @@ const FormularioEmpresa = ({data}) => {
     const [cidade, setCidade] = useState("");
     const [estado, setEstado] = useState("");
 
+    var regex = /[^\w\s]/gi;
+
     const navigate = useNavigate();
+
+    
 
     function verificarCamposPreenchidos() {
         return nomeEmpresa !== "" && cnpj !== "" && cep !== "" && logradouro !== "" && numero !== "" && bairro !== "" && cidade !== "" && estado !== "";
@@ -58,10 +64,10 @@ const FormularioEmpresa = ({data}) => {
             <div className={styles.labels}>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                     <InputLabel nome={"Nome"} tamanho={"49%"} value={nomeEmpresa} onChange={(e) => setNomeEmpresa(e.target.value)} />
-                    <InputLabel nome={"CNPJ"} tamanho={"49%"} value={cnpj} onChange={(e) => setCnpj(e.target.value)} />
+                    <InputLabel nome={"CNPJ"} tamanho={"49%"} value={cnpj} maxLenght={18} onInput={inputMascaraCPF_CNPJ} onChange={(e) => setCnpj(e.target.value.replace(regex, ""))} />
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
-                    <InputLabel nome={"CEP"} tamanho={"29%"} value={cep} onChange={(e) => setCep(e.target.value)} />
+                    <InputLabel nome={"CEP"} tamanho={"29%"} value={cep} maxLenght={9} onInput={inputMascaraCep} onChange={(e) => setCep(e.target.value.replace(regex, ""))} />
                     <InputLabel nome={"Logradouro"} tamanho={"49%"} value={logradouro} onChange={(e) => setLogradouro(e.target.value)} />
                     <InputLabel nome={"N°"} tamanho={"9%"} value={numero} onChange={(e) => setNumero(e.target.value)} />
                     <InputLabel nome={"Comp"} tamanho={"9%"} value={comp} onChange={(e) => setComp(e.target.value)} />
