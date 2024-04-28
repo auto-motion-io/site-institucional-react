@@ -8,34 +8,55 @@ import { useNavigate } from "react-router-dom";
 import "./../../utils/global"
 import { inputMascaraCPF_CNPJ, inputMascaraCep } from "./../../utils/global";
 
-const FormularioEmpresa = ({data}) => {
-    const [nomeEmpresa, setNomeEmpresa] = useState("");
-    const [cnpj, setCnpj] = useState("");
-    const [cep, setCep] = useState("");
-    const [comp, setComp] = useState("");
-    const [logradouro, setLogradouro] = useState("");
-    const [numero, setNumero] = useState("");
-    const [bairro, setBairro] = useState("");
-    const [cidade, setCidade] = useState("");
-    const [estado, setEstado] = useState("");
+const FormularioEmpresa = ({ data }) => {
+    const [nomeEmpresa, setNomeEmpresa] = useState(data && data.nomeEmpresa ? data.nomeEmpresa : "");
+    const [cnpj, setCnpj] = useState(data && data.cnpj ? data.cnpj : "");
+    const [cep, setCep] = useState(data && data.cep ? data.cep : "");
+    const [comp, setComp] = useState(data && data.comp ? data.comp : "");
+    const [logradouro, setLogradouro] = useState(data && data.logradouro ? data.logradouro : "");
+    const [numero, setNumero] = useState(data && data.numero ? data.numero : "");
+    const [bairro, setBairro] = useState(data && data.bairro ? data.bairro : "");
+    const [cidade, setCidade] = useState(data && data.cidade ? data.cidade : "");
+    const [estado, setEstado] = useState(data && data.estado ? data.estado : "");
+
 
     var regex = /[^\w\s]/gi;
 
     const navigate = useNavigate();
 
-    
+    function handleValores(endereco) {
+        setLogradouro(endereco.logradouro);
+        setCidade(endereco.localidade);
+        setBairro(endereco.bairro);
+        setComp(endereco.complemento);
+        setEstado(endereco.uf);
+        setCep(endereco.cep);
+    }
 
     function verificarCamposPreenchidos() {
         return nomeEmpresa !== "" && cnpj !== "" && cep !== "" && logradouro !== "" && numero !== "" && bairro !== "" && cidade !== "" && estado !== "";
     }
 
-    function mudarPagina(){
-        if(verificarCamposPreenchidos()){
-            navigate("/cadastro", { 
-                state: { 
-                    form: 2, 
-                    qtdConcluido: 2 ,
-                    data:{
+    function setCamposMudarPagina() {
+        setLogradouro(logradouro.replace(regex, ""));
+        setCidade(cidade.replace(regex, ""));
+        setBairro(bairro.replace(regex, ""));
+        setComp(comp.replace(regex, ""));
+        setEstado(estado.replace(regex, ""));
+        setCep(cep.replace(regex, ""));
+        setNumero(numero.replace(regex, ""));
+        setCnpj(cnpj.replace(regex, ""));
+        setNomeEmpresa(nomeEmpresa.replace(regex, ""))
+    }
+
+    function mudarPagina() {
+        setCamposMudarPagina();
+        if (verificarCamposPreenchidos()) {
+            navigate("/cadastro", {
+                state: {
+                    form: 2,
+                    qtdConcluido: 2,
+                    data: {
                         email: data.email,
                         nome: data.nome,
                         sobrenome: data.sobrenome,
@@ -50,10 +71,10 @@ const FormularioEmpresa = ({data}) => {
                         cidade,
                         estado
                     }
-                } 
+                }
             });
             console.log(data);
-        } else{
+        } else {
             toast.warning("Preencha todos os campos");
         }
     }
@@ -64,13 +85,13 @@ const FormularioEmpresa = ({data}) => {
             <div className={styles.labels}>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                     <InputLabel nome={"Nome"} tamanho={"49%"} value={nomeEmpresa} onChange={(e) => setNomeEmpresa(e.target.value)} />
-                    <InputLabel nome={"CNPJ"} tamanho={"49%"} value={cnpj} maxLenght={18} onInput={inputMascaraCPF_CNPJ} onChange={(e) => setCnpj(e.target.value.replace(regex, ""))} />
+                    <InputLabel nome={"CNPJ"} tamanho={"49%"} value={cnpj} maxLenght={18} onInput={inputMascaraCPF_CNPJ} onChange={(e) => setCnpj(e.target.value)} />
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
-                    <InputLabel nome={"CEP"} tamanho={"29%"} value={cep} maxLenght={9} onInput={inputMascaraCep} onChange={(e) => setCep(e.target.value.replace(regex, ""))} />
-                    <InputLabel nome={"Logradouro"} tamanho={"49%"} value={logradouro} onChange={(e) => setLogradouro(e.target.value)} />
-                    <InputLabel nome={"N°"} tamanho={"9%"} value={numero} onChange={(e) => setNumero(e.target.value)} />
-                    <InputLabel nome={"Comp"} tamanho={"9%"} value={comp} onChange={(e) => setComp(e.target.value)} />
+                    <InputLabel nome={"CEP"} tamanho={"17%"} value={cep} maxLenght={9} onInput={(e) => inputMascaraCep(e, handleValores)} onChange={(e) => setCep(e.target.value.replace(regex, ""))} />
+                    <InputLabel nome={"Logradouro"} tamanho={"38%"} value={logradouro} onChange={(e) => setLogradouro(e.target.value)} />
+                    <InputLabel nome={"N°"} tamanho={"12%"} value={numero} onChange={(e) => setNumero(e.target.value)} />
+                    <InputLabel nome={"Comp"} tamanho={"29%"} value={comp} onChange={(e) => setComp(e.target.value)} />
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                     <InputLabel nome={"Bairro"} tamanho={"40%"} value={bairro} onChange={(e) => setBairro(e.target.value)} />

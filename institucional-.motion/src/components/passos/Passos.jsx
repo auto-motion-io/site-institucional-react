@@ -1,11 +1,60 @@
 import React from "react";
 import styles from "./Passos.module.css";
 import images from "./../../utils/imagesExports"
+import { useNavigate } from "react-router-dom";
 
-const Passos = ({ qtdConcluido }) => {
+const Passos = ({ qtdConcluido, data }) => {
     var imgConcluido = new Array(4);
     var imgMsgConcluido = new Array(4);
     var passos = <></>;
+
+    const navigate = useNavigate();
+
+    function mudarPagina(formulario) {
+        switch (formulario) {
+            case "Responsavel": {
+                if (qtdConcluido > 0) {
+                    navigate("/cadastro", {
+                        state: {
+                            form: 5,
+                            qtdConcluido: 0,
+                            data: {
+                                email: data.email,
+                                nome: data.nome,
+                                sobrenome: data.sobrenome,
+                                telefone: data.telefone
+                            }
+                        }
+                    })
+                }
+                console.log(data);
+                break;
+            }
+            case "Empresa": {
+                if (qtdConcluido > 1) {
+                    navigate("/cadastro", {
+                        state: {
+                            form: 1,
+                            qtdConcluido: 1,
+                            data: {
+                                nomeEmpresa: data.nomeEmpresa,
+                                cnpj: data.cnpj,
+                                cep: data.cep,
+                                logradouro: data.logradouro,
+                                numero: data.numero,
+                                comp: data.comp,
+                                bairro: data.bairro,
+                                cidade: data.cidade,
+                                estado: data.estado
+                            }
+                        }
+                    })
+                }
+                break;
+            }
+        }
+    }
+
     for (var i = 0; i < 4; i++) {
         if (i < qtdConcluido) {
             imgConcluido[i] = images.checkConcluido;
@@ -16,22 +65,22 @@ const Passos = ({ qtdConcluido }) => {
         }
     }
     if (qtdConcluido == 4) {
-        passos = <div style={{width:"100px"}}></div>
+        passos = <div style={{ width: "100px" }}></div>
     } else {
         passos =
             <div className={[styles.body]}>
                 <section id={styles["section-steps"]}>
                     <div className={styles["card"]}>
                         <img src={imgConcluido[0]} alt={imgMsgConcluido[0]} />
-                        <span>Dados <b>Responsável</b></span>
+                        <a onClick={() => mudarPagina("Responsavel")}><span>Dados do <b>Responsável</b></span></a>
                     </div>
                     <div className={styles["card"]}>
                         <img src={imgConcluido[1]} alt={imgMsgConcluido[1]} />
-                        <span>Dados <b>Empresa</b></span>
+                        <a onClick={() => mudarPagina("Empresa")}><span>Dados da <b>Empresa</b></span></a>
                     </div>
                     <div className={styles["card"]}>
                         <img src={imgConcluido[2]} alt={imgMsgConcluido[2]} />
-                        <span>Escolher <b>Plano</b></span>
+                        <a><span>Escolher <b>Plano</b></span></a>
                     </div>
                     <div className={styles["card"]}>
                         <img src={imgConcluido[3]} alt={imgMsgConcluido[3]} />
@@ -41,7 +90,7 @@ const Passos = ({ qtdConcluido }) => {
             </div>
     }
     return (
-       passos
+        passos
     )
 }
 

@@ -12,7 +12,7 @@ const Cadastro = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const { form, qtdConcluido, data } = location.state || {};
-    var novoForm = <FormularioResponsavel/>
+    var novoForm = <FormularioResponsavel/>;
     switch(form){
         case 1:{
             novoForm = <FormularioEmpresa data={data}/>
@@ -25,6 +25,10 @@ const Cadastro = () => {
         case 3:{
             novoForm = <FormularioConcluido data={data}/>
             break;
+        }
+        case 5:{
+            debugger
+            novoForm = <FormularioResponsavel oldData={data}/>;
         }
     }
 
@@ -39,12 +43,13 @@ const Cadastro = () => {
             </div>
 
             <div className={styles["header"]}>
-                <a style={{cursor:"auto"}} onClick={voltarPitstop}><img className={styles["img-pitstop"]} src={images.logoPitstopColorido} alt="Logo Pitstop" /></a>
+                <a style={{cursor:"pointer"}} onClick={voltarPitstop}><img className={styles["img-voltar"]} src={images.setaVoltar} alt="Seta de Voltar" /></a>
+                <a style={{cursor:"auto"}}><img className={styles["img-pitstop"]} src={images.logoPitstopColorido} alt="Logo Pitstop" /></a>
             </div>
 
             <div id={styles["sections"]}>
                 <div className={styles["container"]}>
-                    <Passos qtdConcluido={qtdConcluido}/>
+                    <Passos qtdConcluido={qtdConcluido} data={data}/>
                     {novoForm}
                 </div>
             </div>

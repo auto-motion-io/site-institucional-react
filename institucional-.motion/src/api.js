@@ -5,3 +5,9 @@ const api = axios.create({
 }); 
 
 export default api;
+
+const retornaCep = (cep) => {
+    return axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+}
+
+export { retornaCep };
