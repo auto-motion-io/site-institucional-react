@@ -1,9 +1,11 @@
 
 .body{
-    width: 98vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
+ 
 }
 
 .container{
@@ -29,10 +31,11 @@
     flex-direction: row;
     align-items: center;
     padding: 100px;
+ 
 }
 
 #section-banner .banner-texto{
-    font-size: 60px;
+    font-size: 50px;
     position: relative;
     z-index: 1;
     color: #474747;   
@@ -48,6 +51,7 @@
     width: 100%;
     height: 800px;
     z-index: -1;
+    right: 0;
 }
 
 #section-banner .img-banner img{
@@ -57,12 +61,13 @@
 
 #section-banner .botao-cadastro a{
     font-family: Product-Bold;
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: none;
-    padding: 20px 40px;
+    padding: 19px 40px;
     border-radius: 30px;
     background-color: #C66D2C;
     color: white;
+    cursor: pointer;
 }
 
 
@@ -142,10 +147,10 @@
 }
 
 #section-impulsione .container a{
-    padding: 15px 30px;
+    padding: 19px 40px;
     background-color: #C66D2C;
     border-radius: 50px;
-
+    font-family: "Product-Bold";
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -233,6 +238,7 @@
     border-radius: 30px;
     color: #474747;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .plano:nth-child(2) .botao a{

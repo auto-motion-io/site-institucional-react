@@ -2,7 +2,7 @@
 #section-info{
     width: 60vw;
     height: 77vh;
-    background-color: #e6e1daea;
+    background-color: #e9e7e2f2;
     color: #474747;
     margin-left: 60px;
     padding: 70px 90px;
@@ -25,6 +25,7 @@
     outline: none;
     padding-left: 20px;
     font-size: 16px;
+    background-color: #f5f3ef;
 }
 
 #section-info .labels label{

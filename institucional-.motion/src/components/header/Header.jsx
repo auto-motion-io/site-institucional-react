@@ -13,12 +13,12 @@ const Header = () => {
             <div className={styles["container"]}>
                 <div className={styles["menu"]}>
                     <span>
-                        <a className={styles["header-text"]} href="./index.html">
+                        <a onClick={() => mudarPagina("/")} className={styles["motion-logo"]}>
                             Quem Somos
                         </a>
                     </span>
                     <span>
-                        <a className={styles["header-text"]} href="./produtos.html">
+                        <a onClick={() => mudarPagina("/pitstop")} className={styles["header-img"]}>
                             Produtos
                         </a>
                     </span>

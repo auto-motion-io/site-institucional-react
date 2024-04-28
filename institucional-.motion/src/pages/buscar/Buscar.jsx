@@ -26,7 +26,7 @@ const Buscar = () => {
                         <div className={styles["cards"]}>
                             <div className={styles["card"]}>
                                 <div className={styles["box"]}>
-                                    <img src={images.estrela} alt="Estrela"/>
+                                    <img src={images.estrela} style={{height: "80px"}} alt="Estrela"/>
                                 </div>
                                 <h3>Avaliações com Descrição</h3>
                             </div>
@@ -56,19 +56,19 @@ const Buscar = () => {
                     <h1>Além de <b>informações adicionais</b></h1>
                     <div className={styles["cards"]}>
                         <div className={styles["card"]}>
-                            <img src={images.telefones} alt="Imagem Telefone"/>
+                            <img src={images.telefones} style={{height: "40px"}} alt="Imagem Telefone"/>
                             <h3>Contato</h3>
                         </div>
                         <div className={styles["card"]}>
-                            <img src={images.iconEndereco} alt="Imagem com um ponteiro de local"/>
+                            <img src={images.iconEndereco} style={{height: "40px"}} alt="Imagem com um ponteiro de local"/>
                             <h3>Endereço</h3>
                         </div>
                         <div className={styles["card"]}>
-                            <img src={images.caixa} alt="Imagem de uma caixa de ferramentas"/>
+                            <img src={images.caixa} style={{height: "32px"}} alt="Imagem de uma caixa de ferramentas"/>
                             <h3>Serviços</h3>
                         </div>
                         <div className={styles["card"]}>
-                            <img src={images.dinheiro} alt="Imagem de um cifrão"/>
+                            <img src={images.dinheiro} style={{height: "35px"}} alt="Imagem de um cifrão"/>
                             <h3>Preços</h3>
                         </div>
                     </div>

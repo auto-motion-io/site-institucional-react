@@ -16,12 +16,13 @@
 }
 
 .header{
-    height: 130px;
+    height: 110px;
     width: 100vw;
     display: flex;
     flex-direction: column;
     padding-left: 10%;
     padding-top: 2%;
+
 }
 
 .header a:nth-child(1){

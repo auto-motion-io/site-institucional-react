@@ -19,8 +19,8 @@ const Pitstop = () => {
                         <span><b>A solução</b> completa <br />
                             para <b>otimizar sua <br />
                                 oficina</b> começa com <br />
-                            um <img src={images.pitstopLaranja} alt="Logo Pitstop Laranja" /></span>
-                        <div className={styles["botao-cadastro"]}><a onClick={() => mudarPagina("/cadastro")}>Cadastrar</a></div>
+                            um <img src={images.pitstopLaranja} width={"45%"} alt="Logo Pitstop Laranja" /></span>
+                        <div className={styles["botao-cadastro"]} style={{marginTop: "2vh"}} ><a onClick={() => mudarPagina("/cadastro")}>Cadastrar</a></div>
                     </div>
                 </div>
                 <div className={styles["img-banner"]}>
@@ -108,7 +108,7 @@ const Pitstop = () => {
                         <h3>Plano Buscar!</h3>
                         <div className={styles["box"]}>
                             <div className={styles["preco"]}>
-                                <h1>R$300</h1>
+                                <h1>R$350</h1>
                                 <p>/por mês</p>
                             </div>
                             <div className={styles["linha"]}>

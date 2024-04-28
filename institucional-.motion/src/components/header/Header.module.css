@@ -39,6 +39,7 @@ header a{
     opacity: 0.7;
     filter: grayscale(100%);
     transition: all 0.4s;
+    cursor: pointer;
 }
 
 header a:hover,

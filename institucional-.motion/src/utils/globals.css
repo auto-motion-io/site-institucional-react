@@ -5,8 +5,10 @@
   --label-milton: #474747b0;
   --btn-milton: #b7b6b3;
   --bg: #eae8e2;
-  --fundo: #f5f5f5;
+  --fundo: #F1EFE9;
 }
+
+
 
 @font-face {
   font-family: "Aristotelica";
@@ -41,7 +43,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {

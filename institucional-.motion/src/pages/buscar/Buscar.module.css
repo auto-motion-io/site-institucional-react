@@ -70,6 +70,7 @@
     border-radius: 0px 50px 50px 0px;
     font-size: 20px;
     outline: none;
+    font-family: "Product-Bold";
 }
 
 .caixa-pesquisa .caixa input::placeholder{
@@ -86,7 +87,7 @@
 }
 
 .busque-encontre .titulo-busque{
-    font-size: 36px;
+    font-size: 30px;
     text-align: center;
 }
 
@@ -112,15 +113,15 @@
 .busque-encontre .box{
     border: 5px solid #d1d1d1;
     border-radius: 30px;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .busque-encontre .box img{
-    height: 90px;
+    height: 60px;
 }
 
 .busque-encontre .card h3{
@@ -162,7 +163,7 @@
 }
 
 #section-info .container h1{
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
 
     color: #474747;

@@ -39,7 +39,6 @@ const Cadastro = () => {
             </div>
 
             <div className={styles["header"]}>
-                <a style={{cursor:"pointer"}} onClick={voltarPitstop}><img src={images.setaVoltar} alt="Seta de Voltar" /></a>
                 <a style={{cursor:"auto"}} onClick={voltarPitstop}><img className={styles["img-pitstop"]} src={images.logoPitstopColorido} alt="Logo Pitstop" /></a>
             </div>
 

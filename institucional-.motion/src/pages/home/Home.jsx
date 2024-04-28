@@ -48,9 +48,9 @@ const Home = () => {
                 <div className={styles["container"]}>
                     <div className={styles["texto"]}>
                         <h5>
-                            Unimos a <span>tecnologia</span> com as necessidades do setor <span>automotivo</span>, compondo soluções
+                            Unimos a <span> tecnologia </span> com as necessidades do setor <span> automotivo</span>, compondo soluções
                             inovadoras que impulsionam o crescimento de
-                            <span>oficinas</span>, fidelizam <span>clientes</span>
+                            <span> oficinas</span>, fidelizam <span> clientes </span>
                             e elevam os serviços a
                             novos patamares.
                         </h5>
