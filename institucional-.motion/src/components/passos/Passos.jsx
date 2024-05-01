@@ -22,7 +22,16 @@ const Passos = ({ qtdConcluido, data }) => {
                                 email: data.email,
                                 nome: data.nome,
                                 sobrenome: data.sobrenome,
-                                telefone: data.telefone
+                                telefone: data.telefone,
+                                nomeEmpresa: data.nomeEmpresa,
+                                cnpj: data.cnpj,
+                                cep: data.cep,
+                                logradouro: data.logradouro,
+                                numero: data.numero,
+                                comp: data.comp,
+                                bairro: data.bairro,
+                                cidade: data.cidade,
+                                estado: data.estado
                             }
                         }
                     })
@@ -37,6 +46,10 @@ const Passos = ({ qtdConcluido, data }) => {
                             form: 1,
                             qtdConcluido: 1,
                             data: {
+                                email: data.email,
+                                nome: data.nome,
+                                sobrenome: data.sobrenome,
+                                telefone: data.telefone,
                                 nomeEmpresa: data.nomeEmpresa,
                                 cnpj: data.cnpj,
                                 cep: data.cep,

@@ -8,16 +8,16 @@ import { useNavigate } from "react-router-dom";
 import "./../../utils/global"
 import { inputMascaraCPF_CNPJ, inputMascaraCep } from "./../../utils/global";
 
-const FormularioEmpresa = ({ data }) => {
-    const [nomeEmpresa, setNomeEmpresa] = useState(data && data.nomeEmpresa ? data.nomeEmpresa : "");
-    const [cnpj, setCnpj] = useState(data && data.cnpj ? data.cnpj : "");
-    const [cep, setCep] = useState(data && data.cep ? data.cep : "");
-    const [comp, setComp] = useState(data && data.comp ? data.comp : "");
-    const [logradouro, setLogradouro] = useState(data && data.logradouro ? data.logradouro : "");
-    const [numero, setNumero] = useState(data && data.numero ? data.numero : "");
-    const [bairro, setBairro] = useState(data && data.bairro ? data.bairro : "");
-    const [cidade, setCidade] = useState(data && data.cidade ? data.cidade : "");
-    const [estado, setEstado] = useState(data && data.estado ? data.estado : "");
+const FormularioEmpresa = ({ data, oldData = null }) => {
+    const [nomeEmpresa, setNomeEmpresa] = useState(oldData && oldData.nomeEmpresa ? oldData.nomeEmpresa : "");
+    const [cnpj, setCnpj] = useState(oldData && oldData.cnpj ? oldData.cnpj : "");
+    const [cep, setCep] = useState(oldData && oldData.cep ? oldData.cep : "");
+    const [comp, setComp] = useState(oldData && oldData.comp ? oldData.comp : "");
+    const [logradouro, setLogradouro] = useState(oldData && oldData.logradouro ? oldData.logradouro : "");
+    const [numero, setNumero] = useState(oldData && oldData.numero ? oldData.numero : "");
+    const [bairro, setBairro] = useState(oldData && oldData.bairro ? oldData.bairro : "");
+    const [cidade, setCidade] = useState(oldData && oldData.cidade ? oldData.cidade : "");
+    const [estado, setEstado] = useState(oldData && oldData.estado ? oldData.estado : "");
 
 
     var regex = /[^\w\s]/gi;

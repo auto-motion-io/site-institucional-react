@@ -15,7 +15,7 @@ const Cadastro = () => {
     var novoForm = <FormularioResponsavel/>;
     switch(form){
         case 1:{
-            novoForm = <FormularioEmpresa data={data}/>
+            novoForm = <FormularioEmpresa data={data} oldData={data}/>
             break;
         }
         case 2:{
