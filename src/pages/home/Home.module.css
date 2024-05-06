@@ -1,0 +1,267 @@
+
+.body{
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    width:85vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+h1, h6{
+    margin: 0;
+}
+
+/* ____________Sessão_Titulo_____________*/
+
+#section-titulo{
+    margin-top: 80px;
+}
+
+#section-titulo .container{
+    padding-left: 5%;
+}
+
+#section-titulo h1{
+    font-size: 68px;
+    color: var(--azul-motion);
+    font-family: 'Product-Bold';
+}
+
+#section-titulo h6{
+    font-size: 34px;
+    font-weight: normal;
+    color: var(--sub);
+    font-family: 'Product-Regular';
+}
+
+#section-titulo h6 b{
+    font-family: 'Product-Regular';
+}
+
+/* ____________Sessão_Carros_____________ */
+
+#section-carros .container{
+    width: 100vw;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+#section-carros .carros-animacao{
+    padding: 60px 0;
+    white-space: nowrap;
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(-100%);
+    } to{
+        transform: translateX(100%);
+    }
+}
+
+#section-carros .imagens{
+    display: inline-block;
+    animation: 20s slide infinite linear;
+}
+
+#section-carros .imagens img{
+    height: 150px;
+    margin: 0 40px;
+}
+
+#section-carros a{
+    font-size: 16px;
+    font-family: 'Product-Bold';
+    color: var(--fundo);
+    background-color: var(--azul-motion);
+    text-decoration: none;
+
+    height: 60px;
+    width: 140px;
+    border-radius: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+    transition: all 0.5s;
+}
+
+#section-carros a:hover{
+    scale: 1.05;
+}
+
+/* ____________Sessão_Jornada_____________ */
+
+#section-jornada{
+    margin-top: 120px;
+    font-weight: lighter;
+    
+}
+
+#section-jornada .container{
+    justify-content: center;
+    align-items: center;
+}
+
+#section-jornada .texto{
+    width: 90%;
+    margin-top: 20px;
+}
+
+#section-jornada .texto h5{
+    font-size: 40px;
+    color: var(--sub);
+    font-weight: normal;
+    font-family: 'Product-Regular';
+}
+
+#section-jornada span{
+    font-weight: bold;
+    color: var(--azul-motion);
+    font-family: 'Product-Regular';
+
+}
+
+/* ____________Sessão_Pilares_____________ */
+
+#section-pilares{
+    margin-top: 112px;
+}
+
+#section-pilares .container{
+    padding-left: 5%;
+    display: flex;
+}
+
+#section-pilares h1{
+    color: var(--bg);
+    font-size: 56px;
+}
+
+#section-pilares .imagens{
+    display: flex;
+    justify-content: center;
+    margin-top: 96px;
+    width: 92%;
+}
+
+#section-pilares .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 420px;
+}
+
+
+#section-pilares .card img{
+    height: 170px;
+}
+
+#section-pilares .card h6{
+    font-family: 'Product-Bold';
+    font-size: 20px;
+    margin-top: 56px;
+    color: #474747;
+    margin-left: 1vh;
+}
+
+
+/* ___________Section Milton_____________*/
+
+#section-milton .container{
+    margin-top: 300px;
+    height: 500px;
+    margin-bottom: 200px;
+
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    font-family: 'Product-Regular';
+
+}
+
+.img-milton{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.img-milton img{
+    height: 350px;
+}
+
+.duvidas{
+    flex: 1.4;
+    padding: 0px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.duvidas h1, .duvidas h4, .duvidas h6{
+    color: var(--label-milton);
+}
+
+.duvidas h4{
+    padding: 5px 0px;
+}
+
+.duvidas h1{
+    font-size: 55px;
+    color: var(--sub);
+}
+
+.duvidas h6{
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.duvidas input{
+    width: 70%;
+    height: 30px;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: #e6e5e0;
+    outline: none;
+}
+
+.duvidas label:nth-of-type(3) textarea {
+    height: 120px;
+    width: 70%;
+    border-radius: 20px;
+    background-color: #e6e5e0;
+    border: none;
+    padding: 18px;
+    color: black;
+    outline: none;
+}
+
+.duvidas .botao{
+    width: 70%;
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+.duvidas .botao a{
+    padding: 14px 40px;
+    text-decoration: none;
+    border: 3px solid var(--btn-milton);
+    border-radius: 30px;
+    color: #4e4e4e;
+    font-weight: bold;
+    font-family: "Product-Bold";
+}

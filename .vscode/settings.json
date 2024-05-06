@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/a5a6d723-7cc8-4872-bc38-7fe695ffd824/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/institucional-motion",
+    "appService.deploySubpath": "."
+}

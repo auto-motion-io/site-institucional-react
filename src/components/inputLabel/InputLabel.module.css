@@ -1,0 +1,9 @@
+.inputLabel span{
+    padding-left: 0.5vw;
+    font-weight: bold;
+}
+
+.inputLabel label input{
+    width: 100%;
+    
+}
