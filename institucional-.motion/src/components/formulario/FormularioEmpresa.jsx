@@ -9,6 +9,7 @@ import "./../../utils/global"
 import { inputMascaraCPF_CNPJ, inputMascaraCep } from "./../../utils/global";
 
 const FormularioEmpresa = ({ data, oldData = null }) => {
+    debugger
     const [nomeEmpresa, setNomeEmpresa] = useState(oldData && oldData.nomeEmpresa ? oldData.nomeEmpresa : "");
     const [cnpj, setCnpj] = useState(oldData && oldData.cnpj ? oldData.cnpj : "");
     const [cep, setCep] = useState(oldData && oldData.cep ? oldData.cep : "");
@@ -100,7 +101,7 @@ const FormularioEmpresa = ({ data, oldData = null }) => {
                 </div>
             </div>
             <div className={styles["botao-avancar"]}>
-                <a onClick={mudarPagina}><img src={images.setaSeguir} alt="Seta de Seguir" /></a>
+                <a style={{cursor: "pointer"}} onClick={mudarPagina}><img src={images.setaSeguir} alt="Seta de Seguir" /></a>
             </div>
         </section>
     );

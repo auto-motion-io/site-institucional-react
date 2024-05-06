@@ -13,6 +13,15 @@ const FormularioResponsavel = ({ oldData }) => {
     const [nome, setNome] = useState(oldData && oldData.nome ? oldData.nome : "");
     const [sobrenome, setSobrenome] = useState(oldData && oldData.sobrenome ? oldData.sobrenome : "");
     const [telefone, setTelefone] = useState(oldData && oldData.telefone ? oldData.telefone : "");
+    const [nomeEmpresa, setNomeEmpresa] = useState(oldData && oldData.nomeEmpresa ? oldData.nomeEmpresa : "");
+    const [cnpj, setCnpj] = useState(oldData && oldData.cnpj ? oldData.cnpj : "");
+    const [cep, setCep] = useState(oldData && oldData.cep ? oldData.cep : "");
+    const [logradouro, setLogradouro] = useState(oldData && oldData.logradouro ? oldData.logradouro : "");
+    const [numero, setNumero] = useState(oldData && oldData.numero ? oldData.numero : "");
+    const [comp, setComp] = useState(oldData && oldData.comp ? oldData.comp : "");
+    const [bairro, setBairro] = useState(oldData && oldData.bairro ? oldData.bairro : "");
+    const [cidade, setCidade] = useState(oldData && oldData.cidade ? oldData.cidade : "");
+    const [estado, setEstado] = useState(oldData && oldData.estado ? oldData.estado : "");
 
 
     const navigate = useNavigate();
@@ -52,15 +61,15 @@ const FormularioResponsavel = ({ oldData }) => {
                         nome,
                         sobrenome,
                         telefone,
-                        nomeEmpresa: oldData.nomeEmpresa,
-                        cnpj: oldData.cnpj,
-                        cep: oldData.cep,
-                        logradouro: oldData.logradouro,
-                        numero: oldData.numero,
-                        comp: oldData.comp,
-                        bairro: oldData.bairro,
-                        cidade: oldData.cidade,
-                        estado: oldData.estado
+                        nomeEmpresa,
+                        cnpj,
+                        cep,
+                        logradouro,
+                        numero,
+                        comp,
+                        bairro,
+                        cidade,
+                        estado
                     }
                 }
             });

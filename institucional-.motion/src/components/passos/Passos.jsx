@@ -19,19 +19,19 @@ const Passos = ({ qtdConcluido, data }) => {
                             form: 5,
                             qtdConcluido: 0,
                             data: {
-                                email: data.email,
-                                nome: data.nome,
-                                sobrenome: data.sobrenome,
-                                telefone: data.telefone,
-                                nomeEmpresa: data.nomeEmpresa,
-                                cnpj: data.cnpj,
-                                cep: data.cep,
-                                logradouro: data.logradouro,
-                                numero: data.numero,
-                                comp: data.comp,
-                                bairro: data.bairro,
-                                cidade: data.cidade,
-                                estado: data.estado
+                                email: data.email ? data.email : "",
+                                nome: data.nome ? data.nome : "",
+                                sobrenome: data.sobrenome ? data.sobrenome : "",
+                                telefone: data.telefone ? data.telefone : "",
+                                nomeEmpresa: data.nomeEmpresa ? data.nomeEmpresa : "",
+                                cnpj: data.cnpj ? data.cnpj : "",
+                                cep: data.cep ? data.cep : "",
+                                logradouro: data.logradouro ? data.logradouro : "",
+                                numero: data.numero ? data.numero : "",
+                                comp: data.comp ? data.comp : "",
+                                bairro: data.bairro ? data.bairro : "",
+                                cidade: data.cidade ? data.cidade : "",
+                                estado: data.estado ? data.estado : ""
                             }
                         }
                     })
@@ -46,19 +46,19 @@ const Passos = ({ qtdConcluido, data }) => {
                             form: 1,
                             qtdConcluido: 1,
                             data: {
-                                email: data.email,
-                                nome: data.nome,
-                                sobrenome: data.sobrenome,
-                                telefone: data.telefone,
-                                nomeEmpresa: data.nomeEmpresa,
-                                cnpj: data.cnpj,
-                                cep: data.cep,
-                                logradouro: data.logradouro,
-                                numero: data.numero,
-                                comp: data.comp,
-                                bairro: data.bairro,
-                                cidade: data.cidade,
-                                estado: data.estado
+                                email: data.email ? data.email : "",
+                                nome: data.nome ? data.nome : "",
+                                sobrenome: data.sobrenome ? data.sobrenome : "",
+                                telefone: data.telefone ? data.telefone : "",
+                                nomeEmpresa: data.nomeEmpresa ? data.nomeEmpresa : "",
+                                cnpj: data.cnpj ? data.cnpj : "",
+                                cep: data.cep ? data.cep : "",
+                                logradouro: data.logradouro ? data.logradouro : "",
+                                numero: data.numero ? data.numero : "",
+                                comp: data.comp ? data.comp : "",
+                                bairro: data.bairro ? data.bairro : "",
+                                cidade: data.cidade ? data.cidade : "",
+                                estado: data.estado ? data.estado : ""
                             }
                         }
                     })
