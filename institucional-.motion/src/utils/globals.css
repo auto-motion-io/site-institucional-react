@@ -58,3 +58,15 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #253f54;
 }
+
+
+/* Override SweetAlert default font */
+.swal2-popup {
+  font-family: 'Product-Bold' !important;
+}
+
+.swal2-popup button{
+  font-family: 'Product-Regular' !important;
+  border-radius: 5px;
+  border: none;
+}

@@ -43,8 +43,7 @@ const Cadastro = () => {
             </div>
 
             <div className={styles["header"]}>
-                <a style={{cursor:"pointer"}} onClick={voltarPitstop}><img className={styles["img-voltar"]} src={images.setaVoltar} alt="Seta de Voltar" /></a>
-                <a style={{cursor:"auto"}}><img className={styles["img-pitstop"]} src={images.logoPitstopColorido} alt="Logo Pitstop" /></a>
+                <a onClick={voltarPitstop} style={{cursor:"auto"}}><img className={styles["img-pitstop"]} src={images.logoPitstopColorido} alt="Logo Pitstop" /></a>
             </div>
 
             <div id={styles["sections"]}>

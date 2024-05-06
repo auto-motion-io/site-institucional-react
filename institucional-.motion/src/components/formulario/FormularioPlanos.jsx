@@ -16,9 +16,10 @@ const FormularioPlanos = ({ data }) => {
       title: "Tem certeza?",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
+      confirmButtonColor: "#315C32",
       cancelButtonColor: "#d33",
       confirmButtonText: "Quero este plano!",
+      cancelButtonText: "Cancelar",
     }).then((result) => {
       return result.isConfirmed;
     });
