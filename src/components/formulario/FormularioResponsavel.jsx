@@ -89,7 +89,7 @@ const FormularioResponsavel = ({ oldData }) => {
                 </div>
                 <InputLabel nome={"Telefone"} tamanho={"50%"} value={telefone} maxLenght={15} onInput={inputMascaraTelefoneCelular} onChange={(e) => setTelefone(e.target.value)} />
             </div>
-            <div className={styles["botao-avancar"]}>
+            <div style={{justifyContent: "flex-end"}} className={styles["botao-avancar"]} >
                 <a style={{ cursor: "pointer" }} onClick={mudarPagina}><img src={images.setaSeguir} alt="Seta de Seguir" /></a>
             </div>
         </section>

@@ -80,6 +80,7 @@ const FormularioEmpresa = ({ data, oldData = null }) => {
         }
     }
 
+
     return (
         <section id={styles["section-info"]}>
             <h1>Dados Empresa</h1>
@@ -101,6 +102,7 @@ const FormularioEmpresa = ({ data, oldData = null }) => {
                 </div>
             </div>
             <div className={styles["botao-avancar"]}>
+                <a style={{ cursor: "pointer" }} onClick={mudarPagina}><img src={images.setaLaranjaVoltar} alt="Seta de Seguir" /></a>
                 <a style={{cursor: "pointer"}} onClick={mudarPagina}><img src={images.setaSeguir} alt="Seta de Seguir" /></a>
             </div>
         </section>

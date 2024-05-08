@@ -5,5 +5,6 @@
 
 .inputLabel label input{
     width: 100%;
-    
+    background-color: #F1EFE9;
+    font-family: "Product-Regular";
 }

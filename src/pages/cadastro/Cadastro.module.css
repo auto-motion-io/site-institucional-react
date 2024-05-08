@@ -16,12 +16,12 @@
 }
 
 .header{
-    height: 20vh;
+    height: 16vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     padding-left: 10%;
-    padding-top: 2%;
+    padding-top: 3%;
 
 }
 
