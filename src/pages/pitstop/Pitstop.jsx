@@ -7,20 +7,26 @@ import Footer from "./../../components/footer/Footer"
 
 const Pitstop = () => {
     const navigate = useNavigate();
-    function mudarPagina(nomePagina){
+    function mudarPagina(nomePagina) {
         navigate(nomePagina);
     }
     return (
         <div className={styles["body"]}>
-            <Header/>
+            <Header />
             <section id={styles["section-banner"]}>
                 <div className={styles["container"]}>
-                    <div className={styles["banner-texto"]}>
-                        <span><b>A solução</b> completa <br />
-                            para <b>otimizar sua <br />
-                                oficina</b> começa com <br />
-                            um <img src={images.pitstopLaranja} width={"45%"} alt="Logo Pitstop Laranja" /></span>
-                        <div className={styles["botao-cadastro"]} style={{marginTop: "2vh"}} ><a onClick={() => mudarPagina("/cadastro")}>Cadastrar</a></div>
+                    <div className={styles["container-texto"]}>
+                        <div className={styles["banner-texto"]}>
+                            <span><b>A solução</b> completa <br />
+                                para <b>otimizar sua <br />
+                                    oficina</b> começa com <br />
+                                um <img src={images.pitstopLaranja} width={"45%"} alt="Logo Pitstop Laranja" /></span>
+                            <div className={styles["botao-cadastro"]} style={{ marginTop: "2vh" }} ><a onClick={() => mudarPagina("/cadastro")}>Cadastrar</a></div>
+                        </div>
+                        <div className={styles["banner-texto"]}>
+                            <span><b>Já tem uma conta?</b></span>
+                            <div className={styles["botao-cadastro"]} style={{ marginTop: "2vh" }} ><a onClick={() => mudarPagina("/cadastro")}>Entrar</a></div>
+                        </div>
                     </div>
                 </div>
                 <div className={styles["img-banner"]}>
@@ -134,7 +140,7 @@ const Pitstop = () => {
                     </div>
                 </div>
             </section>
-            <Footer/>
+            <Footer />
         </div>
     );
 };

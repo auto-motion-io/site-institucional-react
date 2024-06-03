@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Cadastro.module.css";
 import images from "./../../utils/imagesExports"
 import Passos from "./../../components/passos/Passos"
@@ -7,6 +7,7 @@ import FormularioEmpresa from "./../../components/formulario/FormularioEmpresa"
 import FormularioPlanos from "./../../components/formulario/FormularioPlanos"
 import FormularioConcluido from "./../../components/formulario/FormularioConcluido"
 import { useLocation, useNavigate } from "react-router-dom";
+import FormularioConfirmaEmail from "../../components/formulario/FormularioConfirmaEmail";
 
 const Cadastro = () => {
     const navigate = useNavigate();
@@ -23,11 +24,14 @@ const Cadastro = () => {
             break;
         }
         case 3:{
-            novoForm = <FormularioConcluido data={data}/>
+            novoForm = <FormularioConfirmaEmail/>
+            break;
+        }
+        case 4:{
+            novoForm = <FormularioConcluido/>
             break;
         }
         case 5:{
-            debugger
             novoForm = <FormularioResponsavel oldData={data}/>;
         }
     }

@@ -9,7 +9,6 @@ import "./../../utils/global"
 import { inputMascaraCPF_CNPJ, inputMascaraCep } from "./../../utils/global";
 
 const FormularioEmpresa = ({ data, oldData = null }) => {
-    debugger
     const [nomeEmpresa, setNomeEmpresa] = useState(oldData && oldData.nomeEmpresa ? oldData.nomeEmpresa : "");
     const [cnpj, setCnpj] = useState(oldData && oldData.cnpj ? oldData.cnpj : "");
     const [cep, setCep] = useState(oldData && oldData.cep ? oldData.cep : "");
@@ -80,6 +79,29 @@ const FormularioEmpresa = ({ data, oldData = null }) => {
         }
     }
 
+    function voltarPagina() {
+        navigate("/cadastro", {
+            state: {
+                form: 5,
+                qtdConcluido: 0,
+                data: {
+                    email: data.email,
+                    nome: data.nome,
+                    sobrenome: data.sobrenome,
+                    telefone: data.telefone,
+                    nomeEmpresa: data.nomeEmpresa,
+                    cnpj: data.cnpj,
+                    cep: data.cep,
+                    logradouro: data.logradouro,
+                    numero: data.numero,
+                    comp: data.comp,
+                    bairro: data.bairro,
+                    cidade: data.cidade,
+                    estado: data.estado
+                }
+            }
+        });
+    }
 
     return (
         <section id={styles["section-info"]}>
@@ -102,7 +124,7 @@ const FormularioEmpresa = ({ data, oldData = null }) => {
                 </div>
             </div>
             <div className={styles["botao-avancar"]}>
-                <a style={{ cursor: "pointer" }} onClick={mudarPagina}><img src={images.setaLaranjaVoltar} alt="Seta de Seguir" /></a>
+                <a style={{ cursor: "pointer" }} onClick={voltarPagina}><img src={images.setaLaranjaVoltar} alt="Seta de Seguir" /></a>
                 <a style={{cursor: "pointer"}} onClick={mudarPagina}><img src={images.setaSeguir} alt="Seta de Seguir" /></a>
             </div>
         </section>

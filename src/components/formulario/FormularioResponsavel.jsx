@@ -8,7 +8,6 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 const FormularioResponsavel = ({ oldData }) => {
-    debugger
     const [email, setEmail] = useState(oldData && oldData.email ? oldData.email : "");
     const [nome, setNome] = useState(oldData && oldData.nome ? oldData.nome : "");
     const [sobrenome, setSobrenome] = useState(oldData && oldData.sobrenome ? oldData.sobrenome : "");
@@ -22,12 +21,11 @@ const FormularioResponsavel = ({ oldData }) => {
     const [bairro, setBairro] = useState(oldData && oldData.bairro ? oldData.bairro : "");
     const [cidade, setCidade] = useState(oldData && oldData.cidade ? oldData.cidade : "");
     const [estado, setEstado] = useState(oldData && oldData.estado ? oldData.estado : "");
-
+    
 
     const navigate = useNavigate();
 
     function verificarCamposPreenchidos() {
-        debugger
         if (email !== "" || nome !== "" || sobrenome !== "" || telefone !== "") {
             if (!verificaEmail(email)) {
                 toast.warning("E-mail invalido!", {
@@ -52,6 +50,7 @@ const FormularioResponsavel = ({ oldData }) => {
 
     function mudarPagina() {
         if (verificarCamposPreenchidos()) {
+            sessionStorage.setItem("email", email);
             navigate("/cadastro", {
                 state: {
                     form: 1,

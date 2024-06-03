@@ -34,12 +34,30 @@
  
 }
 
+.container-textos{
+    display: flex;
+    flex-direction: column;
+}
+
 #section-banner .banner-texto{
     font-size: 50px;
     position: relative;
     z-index: 1;
     color: #474747;   
 }
+
+.banner-texto:nth-child(2) span b{
+    font-size: 4vh;
+}
+
+.banner-texto:nth-child(2){
+    margin-top: 3vh;
+}
+
+.banner-texto:nth-child(2) .botao-cadastro{
+    margin-top: 0vh;
+}
+
 
 #section-banner .banner-texto img{
     margin-bottom: -15px;

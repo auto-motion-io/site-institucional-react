@@ -147,3 +147,71 @@
     height: 150px;
     margin-bottom: 20px;
 }
+
+#section-confirma{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 75vh;
+    font-family: 'Product-Regular';
+    color: #474747;
+}
+
+.title-confirma{
+    font-size: 3vh;
+    margin-bottom: 5vh;
+}
+
+.box-confirma{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 60vw;
+    height: 75vh;
+    background-color: #ECEAE5f2;
+    border-radius: 10vh;
+    padding: 4vw;
+    font-weight: bold;
+  }
+
+  .input-label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+  }
+
+  .input-label label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+    font-weight: bold;
+  }
+
+  .input-label label span{
+    margin-bottom: 1.2vh;
+    font-size: 2.2vh;
+  }
+
+  .input-label label input{
+    height: 5.3vh;
+    border: none;
+    border-radius: 10vh;
+    outline: none;
+    padding-left: 20px;
+    font-size: 16px;
+    width: 28vw;
+  }
+
+  #section-confirma button{
+    width: 8vw;
+    height: 6vh;
+    margin-top: 5vh;
+    border-radius: 4vh;
+    cursor: pointer;
+    background-color: #c66d2c;
+    border: none;
+    color: #ECEAE5;
+    margin-bottom: 3vh;
+  }
