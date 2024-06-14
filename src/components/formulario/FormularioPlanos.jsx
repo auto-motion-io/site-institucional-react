@@ -12,7 +12,7 @@ const FormularioPlanos = ({ data }) => {
   const [isLoading, setIsLoading] = useState(false)
   const [valorBuscar, setValorBuscar] = useState(false);
 
-  async function mudarPagina() {
+  async function mudarPagina(hasBuscar) {
     let isConfirmed = await Swal.fire({
       title: "Tem certeza?",
       icon: "warning",
@@ -25,8 +25,7 @@ const FormularioPlanos = ({ data }) => {
       return result.isConfirmed;
     });
     if (isConfirmed) {
-      setValorBuscar(true);
-      let cadastrou = await cadastrar();
+      let cadastrou = await cadastrar(hasBuscar);
       ;
       if (cadastrou) {
         navigate("/cadastro", {
@@ -66,7 +65,7 @@ const FormularioPlanos = ({ data }) => {
   }
 
 
-  async function cadastrar() {
+  async function cadastrar(hasBuscarTeste) {
     setIsLoading(true);
     const oficina = {
       nome: data.nomeEmpresa,
@@ -74,7 +73,7 @@ const FormularioPlanos = ({ data }) => {
       cep: data.cep,
       numero: data.numero,
       complemento: data.comp,
-      hasBuscar: valorBuscar,
+      hasBuscar: hasBuscarTeste,
     };
     console.log(oficina);
     try {
