@@ -9,7 +9,7 @@ import Loader from "../loader/Loader";
 
 const FormularioPlanos = ({ data }) => {
   const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
   const [valorBuscar, setValorBuscar] = useState(false);
 
   async function mudarPagina(hasBuscar) {
@@ -26,21 +26,19 @@ const FormularioPlanos = ({ data }) => {
     });
     if (isConfirmed) {
       let cadastrou = await cadastrar(hasBuscar);
-      ;
       if (cadastrou) {
         navigate("/cadastro", {
           state: {
             form: 3,
             qtdConcluido: 4,
-            disabled: true
-          }
-        })
+            disabled: true,
+          },
+        });
       }
-
     }
   }
 
-  function voltarPagina(){
+  function voltarPagina() {
     navigate("/cadastro", {
       state: {
         form: 1,
@@ -58,12 +56,12 @@ const FormularioPlanos = ({ data }) => {
           comp: data.comp,
           bairro: data.bairro,
           cidade: data.cidade,
-          estado: data.estado
-        }
-      }
-    })
+          estado: data.estado,
+        },
+      },
+    });
+    console.log(data.telefone)
   }
-
 
   async function cadastrar(hasBuscarTeste) {
     setIsLoading(true);
@@ -77,24 +75,37 @@ const FormularioPlanos = ({ data }) => {
     };
     console.log(oficina);
     try {
-      const resOficina = await api.post(`/oficinas`, oficina).then((response) => {
-        console.log(response)
-        return {
-          email: data.email,
-          nome: data.nome,
-          sobrenome: data.sobrenome,
-          fkOficina: response.data.id,
-        };
-      });
+      const resOficina = await api
+        .post(`/oficinas`, oficina)
+        .then((response) => {
+          console.log(response);
+          return {
+            email: data.email,
+            nome: data.nome,
+            sobrenome: data.sobrenome,
+            fkOficina: response.data.id,
+          };
+        });
+
+      console.log("data telefone: " + data.telefone);
+      api.put(`/infos-oficina/atualiza-zap/${resOficina.fkOficina}`,{
+        whatsapp: data.telefone
+      } 
+      );
+
       console.log(resOficina);
-      const resGerente = await api.post(`/gerentes`, resOficina).then((response) => {
-        console.log("Res Gerente: " + response);
-      });
-      const resConfirma = await api.post(`/gerentes/set-token?op=email`, {email : data.email}).then((response) => {
-        console.log("Res Confirma: " + response);
-      });
+      const resGerente = await api
+        .post(`/gerentes`, resOficina)
+        .then((response) => {
+          console.log("Res Gerente: " + response);
+        });
+      const resConfirma = await api
+        .post(`/gerentes/set-token?op=email`, { email: data.email })
+        .then((response) => {
+          console.log("Res Confirma: " + response);
+        });
     } catch (error) {
-      console.log(error.response)
+      console.log(error.response);
       console.error("Erro ao cadastrar-se:", error);
       toast.error("Ocorreu um erro no cadastro por favor, tente novamente.");
       setIsLoading(false);
@@ -161,13 +172,16 @@ const FormularioPlanos = ({ data }) => {
               </div>
             </div>
             <div className={styles["botao"]}>
-              <a style={{ cursor: "pointer" }} onClick={() => mudarPagina(true)}>
+              <a
+                style={{ cursor: "pointer" }}
+                onClick={() => mudarPagina(true)}
+              >
                 Escolher
               </a>
             </div>
           </div>
         </div>
-        <div style={{marginTop: "7vh"}}>
+        <div style={{ marginTop: "7vh" }}>
           <a style={{ cursor: "pointer" }} onClick={voltarPagina}>
             <img src={images.setaLaranjaVoltar} alt="Seta de Seguir" />
           </a>
