@@ -4,7 +4,7 @@ import images from "./../../utils/imagesExports"
 import { useNavigate } from "react-router-dom";
 import Header from "./../../components/header/Header"
 import Footer from "./../../components/footer/Footer"
-
+import AcessePit from "../../utils/assets/acessePit.svg"
 const Pitstop = () => {
     const navigate = useNavigate();
     function mudarPagina(nomePagina) {
@@ -22,10 +22,6 @@ const Pitstop = () => {
                                     oficina</b> começa com <br />
                                 um <img src={images.pitstopLaranja} width={"45%"} alt="Logo Pitstop Laranja" /></span>
                             <div className={styles["botao-cadastro"]} style={{ marginTop: "2vh" }} ><a onClick={() => mudarPagina("/cadastro")}>Cadastrar</a></div>
-                        </div>
-                        <div className={styles["banner-texto"]}>
-                            <span><b>Já tem uma conta?</b></span>
-                            <div className={styles["botao-cadastro"]} style={{ marginTop: "2vh" }} ><a onClick={() => mudarPagina("/cadastro")}>Entrar</a></div>
                         </div>
                     </div>
                 </div>
@@ -140,6 +136,11 @@ const Pitstop = () => {
                     </div>
                 </div>
             </section>
+
+            <div>
+                <a href="https://orange-pebble-0785fea0f.5.azurestaticapps.net"><img  src={AcessePit} alt="" /></a>
+            </div>
+
             <Footer />
         </div>
     );
