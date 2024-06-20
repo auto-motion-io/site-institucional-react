@@ -73,7 +73,7 @@ const FormularioConfirmaEmail = () => {
           <div className={styles["input-label"]}>
             <label>
               <span>Senha*</span>
-              <input onChange={(e) => setSenha(e.target.value)} />
+              <input onChange={(e) => setSenha(e.target.value)} type="password"/>
             </label>
           </div>
         </div>
