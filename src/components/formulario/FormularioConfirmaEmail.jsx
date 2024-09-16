@@ -4,14 +4,17 @@ import { useNavigate } from "react-router-dom";
 import api from "../../api";
 import images from "../../utils/imagesExports";
 import { useState } from "react";
+import Loader from "../loader/Loader";
 
 const FormularioConfirmaEmail = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [token, setToken] = useState("");
   const [senha, setSenha] = useState("");
+  const [isLoading, setIsLoading] = useState(false)
 
   async function handleEnviar() {
+    setIsLoading(true);
     api.post("/gerentes/confirmar-token?op=senha", {
       email: sessionStorage.getItem("email"),
       token: token,
@@ -29,7 +32,9 @@ const FormularioConfirmaEmail = () => {
     }).catch((error) => {
       console.log("Erro foi esse aqui: ", error);
       toast.error('Erro ao alterar senha!');
+      setIsLoading(false);
     });
+    setIsLoading(false);
   }
 
   // async function deletarOficina() {
@@ -57,32 +62,35 @@ const FormularioConfirmaEmail = () => {
   // }
 
   return (
-    <section id={styles["section-confirma"]} className={styles["confirma"]}>
-      <div className={styles["box-confirma"]}>
-        <div className={styles["title-confirma"]}>
-          <h1>Confirmação de E-mail</h1>
-        </div>
-        <p>Enviamos um token para o seu e-mail, verifique e digite a baixo com a sua nova senha.</p>
-        <div className={styles["box-inputs"]}>
-          <div className={styles["input-label"]}>
-            <label>
-              <span>Token*</span>
-              <input onChange={(e) => setToken(e.target.value)} />
-            </label>
+    <>
+      <Loader show={isLoading} />
+      <section id={styles["section-confirma"]} className={styles["confirma"]}>
+        <div className={styles["box-confirma"]}>
+          <div className={styles["title-confirma"]}>
+            <h1>Confirmação de E-mail</h1>
           </div>
-          <div className={styles["input-label"]}>
-            <label>
-              <span>Senha*</span>
-              <input onChange={(e) => setSenha(e.target.value)} />
-            </label>
+          <p>Enviamos um token para o seu e-mail, verifique e digite a baixo com a sua nova senha.</p>
+          <div className={styles["box-inputs"]}>
+            <div className={styles["input-label"]}>
+              <label>
+                <span>Token*</span>
+                <input onChange={(e) => setToken(e.target.value)} />
+              </label>
+            </div>
+            <div className={styles["input-label"]}>
+              <label>
+                <span>Senha*</span>
+                <input type="password" onChange={(e) => setSenha(e.target.value)} />
+              </label>
+            </div>
+          </div>
+          <button onClick={(handleEnviar)} className={styles["btn-confirma btn-confirma-email"]}>Confirmar</button>
+          <div className={styles["botao-avancar"]}>
+            <a style={{ cursor: "pointer" }}><img src={images.setaLaranjaVoltar} alt="Seta de Seguir" /></a>
           </div>
         </div>
-        <button onClick={(handleEnviar)} className={styles["btn-confirma"]}>Confirmar</button>
-        <div className={styles["botao-avancar"]}>
-          <a style={{ cursor: "pointer" }}><img src={images.setaLaranjaVoltar} alt="Seta de Seguir" /></a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

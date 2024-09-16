@@ -210,8 +210,14 @@
     margin-top: 5vh;
     border-radius: 4vh;
     cursor: pointer;
+    font-family: "Product-Regular";
     background-color: #c66d2c;
     border: none;
     color: #ECEAE5;
     margin-bottom: 3vh;
+    transition: all 0.5s ease-in-out;
+  }
+
+  #section-confirma button:hover{
+    transform: scale(1.025);
   }
