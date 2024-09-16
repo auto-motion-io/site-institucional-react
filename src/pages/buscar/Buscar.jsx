@@ -85,7 +85,7 @@ const Buscar = () => {
                             <img src={images.marcas} alt="Imagem com marcas de veículos"/>
                         </div>
                     </div>
-                    <a href="">Acessar o <img src={images.logoBuscarColorido} alt="Logo do Buscar"/></a>
+                    <a href="https://agreeable-cliff-081708d0f.5.azurestaticapps.net/">Acessar o <img src={images.logoBuscarColorido} alt="Logo do Buscar"/></a>
                 </div>
             </section>
             <Footer/>
