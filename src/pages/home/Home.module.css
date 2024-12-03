@@ -19,28 +19,28 @@ h1, h6{
 
 /* ____________Sessão_Titulo_____________*/
 
-#section-titulo{
+.section-titulo{
     margin-top: 80px;
 }
 
-#section-titulo .container{
+.section-titulo .container{
     padding-left: 5%;
 }
 
-#section-titulo h1{
+.section-titulo h1{
     font-size: 68px;
     color: var(--azul-motion);
     font-family: 'Product-Bold';
 }
 
-#section-titulo h6{
+.section-titulo h6{
     font-size: 34px;
     font-weight: normal;
     color: var(--sub);
     font-family: 'Product-Regular';
 }
 
-#section-titulo h6 b{
+.section-titulo h6 b{
     font-family: 'Product-Regular';
 }
 
@@ -100,30 +100,30 @@ h1, h6{
 
 /* ____________Sessão_Jornada_____________ */
 
-#section-jornada{
+.section-jornada{
     margin-top: 120px;
     font-weight: lighter;
     
 }
 
-#section-jornada .container{
+.section-jornada .container{
     justify-content: center;
     align-items: center;
 }
 
-#section-jornada .texto{
+.section-jornada .texto{
     width: 90%;
     margin-top: 20px;
 }
 
-#section-jornada .texto h5{
+.section-jornada .texto h5{
     font-size: 40px;
     color: var(--sub);
     font-weight: normal;
     font-family: 'Product-Regular';
 }
 
-#section-jornada span{
+.section-jornada span{
     font-weight: bold;
     color: var(--azul-motion);
     font-family: 'Product-Regular';
@@ -132,28 +132,28 @@ h1, h6{
 
 /* ____________Sessão_Pilares_____________ */
 
-#section-pilares{
+.section-pilares{
     margin-top: 112px;
 }
 
-#section-pilares .container{
+.section-pilares .container{
     padding-left: 5%;
     display: flex;
 }
 
-#section-pilares h1{
+.section-pilares h1{
     color: var(--bg);
     font-size: 56px;
 }
 
-#section-pilares .imagens{
+.section-pilares .imagens{
     display: flex;
     justify-content: center;
     margin-top: 96px;
     width: 92%;
 }
 
-#section-pilares .card{
+.section-pilares .card{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -162,11 +162,11 @@ h1, h6{
 }
 
 
-#section-pilares .card img{
+.section-pilares .card img{
     height: 170px;
 }
 
-#section-pilares .card h6{
+.section-pilares .card h6{
     font-family: 'Product-Bold';
     font-size: 20px;
     margin-top: 56px;

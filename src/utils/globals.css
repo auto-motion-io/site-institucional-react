@@ -70,3 +70,6 @@ body {
   border-radius: 5px;
   border: none;
 }
+html {
+  scroll-behavior: smooth;
+}

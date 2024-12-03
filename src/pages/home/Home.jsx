@@ -3,13 +3,26 @@ import styles from "./Home.module.css";
 import images from "./../../utils/imagesExports"
 import Header from "./../../components/header/Header"
 import Footer from "./../../components/footer/Footer"
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
-   
+    const location = useLocation();
+
+    useEffect(() => {
+      const hash = location.hash; // Obtém o hash da URL (ex: #section-jornada)
+      if (hash) {
+        const targetElement = document.getElementById(hash.replace("#", ""));
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }, [location]);
+
     return (
         <div className={styles["body"]}>
             <Header/>
-            <section id={styles["section-titulo"]}>
+            <section className={styles["section-titulo"]} id="section-titulo">
                 <div className={styles["container"]}>
                     <div className={styles["textos"]}>
                         <h1>Tudo que sua oficina precisa,</h1>
@@ -40,11 +53,10 @@ const Home = () => {
                             <img src={images.carro4} alt="Imagem Carro 4" />
                         </div>
                     </div>
-                    <a href="">Conhecer</a>
                 </div>
             </div>
 
-            <div id={styles["section-jornada"]}>
+            <div className={styles["section-jornada"]} id="section-jornada">
                 <div className={styles["container"]}>
                     <div className={styles["texto"]}>
                         <h5>
@@ -58,7 +70,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div id={styles["section-pilares"]}>
+            <div className={styles["section-pilares"]} id="section-pilares">
                 <div className={styles["container"]}>
                     <div className={styles["imagens"]}>
                         <div className={styles["card"]}>

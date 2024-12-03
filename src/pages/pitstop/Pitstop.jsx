@@ -72,7 +72,6 @@ const Pitstop = () => {
                         <p><b>Impulsione</b> ainda mais seu negócio com o <img src={images.buscarLogo}
                             alt="Imagem que representa o produto buscar!" /></p>
                     </div>
-                    <a href="">Conhecer</a>
                 </div>
             </section>
 
@@ -103,7 +102,7 @@ const Pitstop = () => {
                             </div>
                         </div>
                         <div className={styles["botao"]}>
-                            <a href="">Escolher</a>
+                            <a onClick={()=> mudarPagina("/cadastro")}>Escolher</a>
                         </div>
                     </div>
                     <div className={styles["plano"]}>
@@ -131,14 +130,14 @@ const Pitstop = () => {
                             </div>
                         </div>
                         <div className={styles["botao"]}>
-                            <a href="">Escolher</a>
+                            <a onClick={()=> mudarPagina("/cadastro")}>Escolher</a>
                         </div>
                     </div>
                 </div>
             </section>
 
             <div>
-                <a href="https://orange-pebble-0785fea0f.5.azurestaticapps.net"><img  src={AcessePit} alt="" /></a>
+                <a href="https://pitstop.motionweb.me/"><img  src={AcessePit} alt="" /></a>
             </div>
 
             <Footer />
