@@ -49,12 +49,12 @@ const Footer = () => {
               <a href="">Endereço</a>
             </div>
             <div className={styles.logos}>
-              <a href="https://pitstop.motionweb.me/"><img src={images.logoPitstopFooter} alt="Logo Pitstop" /></a>
-              <a href="https://buscar.motionweb.me/"><img src={images.logoBuscarFooter} alt="Logo Buscar" /></a>
+              <a target='blank' href="https://pitstop.motionweb.me/"><img src={images.logoPitstopFooter} alt="Logo Pitstop" /></a>
+              <a target='blank' href="https://buscar.motionweb.me/"><img src={images.logoBuscarFooter} alt="Logo Buscar" /></a>
               <div className={styles["logos-redes"]}>
-                <a href=""><img src={images.logoInstagram} alt="Logo Instagram" /></a>
-                <a href=""><img src={images.logoLinkedin} alt="Logo Linkedin" /></a>
-                <a href="https://github.com/auto-motion-io"><img src={images.logoGithub} alt="Logo Github" /></a>
+                <a target='blank' href="https://www.instagram.com/motionweb.io/"><img src={images.logoInstagram} alt="Logo Instagram" /></a>
+                <a target='blank' href=""><img src={images.logoLinkedin} alt="Logo Linkedin" /></a>
+                <a target='blank' href="https://github.com/auto-motion-io"><img src={images.logoGithub} alt="Logo Github" /></a>
               </div>
             </div>
           </div>

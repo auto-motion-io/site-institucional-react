@@ -75,6 +75,7 @@ footer .links a{
     color: #474747;
     width: fit-content;
     transition: all 0.5s;
+    cursor: pointer;
 }
 
 footer .links a:hover{
