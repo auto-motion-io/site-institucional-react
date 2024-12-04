@@ -137,7 +137,7 @@ const Pitstop = () => {
             </section>
 
             <div>
-                <a href="https://pitstop.motionweb.me/"><img  src={AcessePit} alt="" /></a>
+                <a target="blank" href="https://pitstop.motionweb.me/"><img  src={AcessePit} alt="" /></a>
             </div>
 
             <Footer />

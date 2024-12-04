@@ -85,7 +85,7 @@ const Buscar = () => {
                             <img src={images.marcas} alt="Imagem com marcas de veículos"/>
                         </div>
                     </div>
-                    <a href="https://buscar.motionweb.me/">Acessar o <img src={images.logoBuscarColorido} alt="Logo do Buscar"/></a>
+                    <a target="blank" href="https://buscar.motionweb.me/">Acessar o <img src={images.logoBuscarColorido} alt="Logo do Buscar"/></a>
                 </div>
             </section>
             <Footer/>

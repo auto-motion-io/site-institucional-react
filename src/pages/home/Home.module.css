@@ -256,7 +256,8 @@ h1, h6{
 
 }
 
-.duvidas .botao a{
+.duvidas .botao button{
+    cursor: pointer;
     padding: 14px 40px;
     text-decoration: none;
     border: 3px solid var(--btn-milton);
